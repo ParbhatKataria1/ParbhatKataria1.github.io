@@ -1,10 +1,10 @@
 import { StarIcon } from "@chakra-ui/icons";
-import { Badge, Box, Button, Flex, Image, Link, Text } from "@chakra-ui/react";
+import { Badge, Box, Button, Flex, Image, Link, Text, Heading } from "@chakra-ui/react";
 import { BiLinkExternal } from 'react-icons/bi';
 import { BsGithub } from 'react-icons/bs';
 
 
-function HelperProject() {
+function HelperProject({image, title, techStack, desc}) {
     const property = {
       imageUrl: 'https://bit.ly/2Z4KKcF',
       imageAlt: 'Rear view of modern home with pool',
@@ -23,7 +23,7 @@ function HelperProject() {
                 <Image
                   transform="scale(1.0)"
                   src={
-                    'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80'
+                    image
                   }
                   alt="some text"
                   objectFit="contain"
@@ -38,22 +38,22 @@ function HelperProject() {
   
         <Box p='6'>
           <Box display='flex' alignItems='baseline'>
-          
-            <Badge borderRadius='full' px='2' colorScheme='teal'>
-              JS
-            </Badge>
-            <Badge borderRadius='full' px='2' colorScheme='teal'>
-              HTML
-            </Badge>
 
-            <Badge borderRadius='full' px='2' colorScheme='teal'>
-              CSS
-            </Badge>
 
-            <Badge borderRadius='full' px='2' colorScheme='teal'>
-              JQuery
-            </Badge>
+          {techStack?.map((el, ind)=>{
+            return <Badge key={ind+Date.now()} borderRadius='full' px='2' colorScheme='teal'>{el} </Badge>
+          })}
             
+          </Box>
+          <Box
+            mt='4'
+            fontWeight='bold'
+            as='h4'
+            lineHeight='tight'
+            noOfLines={2}
+            textAlign='left'
+          >
+           {title}
           </Box>
   
           <Box
@@ -64,8 +64,7 @@ function HelperProject() {
             noOfLines={2}
             textAlign='left'
           >
-            It is a beauty product-based website which is used to
-order cosmetic products
+           {desc}
           </Box>
   
   

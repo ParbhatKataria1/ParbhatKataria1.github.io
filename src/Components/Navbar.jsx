@@ -37,6 +37,10 @@ const NavLink = ({ children }) => (
 export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  function handleResume(){
+    window.open(`https://drive.google.com/file/d/1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer/view`)
+  }
   return (
     <>
       <Box as='header' bg={useColorModeValue('gray.100', 'gray.900')} px={4} position='fixed' w='100%' zIndex={'1000'} top={'0px'} >
@@ -49,7 +53,8 @@ export default function Nav() {
             <Button colorScheme='gray' variant='ghost'>About</Button>
             <Button colorScheme='gray' variant='ghost'>Skills</Button>
             <Button colorScheme='gray' variant='ghost'>Contact</Button>
-            <Link href='https://drive.google.com/file/d/1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer/view?usp=share_links' isExternal textStyle={'none'}>
+            
+            <Link href='Parbhat_Resume.pdf' download  onClick={handleResume } target='_blank'>
               <Button colorScheme='teal' size='md' >
                 <Text mr={'4px'} >Resume</Text> <BiDownload/>
               </Button>

@@ -50,14 +50,17 @@ export const BlogAuthor = (props) => {
 
 const AboutMe = () => {
   return (
-    <Container maxW={'7xl'} p="12" marginTop={'20'}
-    
+    <Container maxW={'7xl'} p="12" marginTop={'5'}
+    textAlign='center'
     >
-      <Heading as="h1">About Me</Heading>
+      <Heading mb={'10'} as="h1">About Me</Heading>
       <Box 
+      w={'80%'}
+      m='auto'
       bg={useColorModeValue('white', 'gray.800')}
       borderRadius='20px'
       p='20px'
+      textAlign={'left'}
       boxShadow={'rgba(230, 250, 255, 0.56) 0px 22px 70px 4px;'}
         marginTop={{ base: '1', sm: '5' }}
         display="flex"
@@ -65,83 +68,71 @@ const AboutMe = () => {
         justifyContent="space-between">
         <Box
           display="flex"
-          flex="1"
-          marginRight="3"
-          position="relative"
-          alignItems="center"
-          width={'10%'}>
+          marginRight="3">
           
           <Box
             width={{ base: '100%', sm: '85%' }}
             zIndex="2"
-            marginLeft={{ base: '0', sm: '5%' }}
-            marginTop="5%">
+            marginLeft={{ base: '0', sm: '5%' }}>
             <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
               <Image
-                borderRadius="lg"
+                borderRadius="50%"
                 src={
-                  'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80'
+                  'PP.jpg'
                 }
+                h='350px'
+                w='350px'
                 alt="some good alt text"
-                objectFit="contain"
+                objectFit="cover"
               />
             </Link>
           </Box>
-          <Box zIndex="1" width="100%" position="absolute" height="100%">
-            <Box
-              bgGradient={useColorModeValue(
-                'radial(orange.600 1px, transparent 1px)',
-                'radial(orange.300 1px, transparent 1px)'
-              )}
-              backgroundSize="20px 20px"
-              opacity="0.4"
-              height="100%"
-            />
-          </Box>
+          
         </Box>
-        <Box
-          display="flex"
-          flex="1"
-          flexDirection="column"
-          justifyContent="center"
-          marginTop={{ base: '3', sm: '0' }}>
-          {/* <BlogTags tags={['Engineering', 'Product']} /> */}
-          <Box display={'flex'} justifyContent={'space-between'} textAlign='center' marginBottom={'20px'}>
-            <Box w='30%' padding={'18px'} borderRadius="9px" boxShadow={'rgba(255, 255, 255, 0.17) 0px -23px 25px 0px inset, rgba(255, 255, 255, 0.15) 0px -36px 30px 0px inset, rgba(255, 255, 255, 0.1) 0px -79px 40px 0px inset, rgba(255, 255, 255, 0.06) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px, rgba(255, 255, 255, 0.09) 0px 8px 4px, rgba(255, 255, 255, 0.09) 0px 16px 8px, rgba(255, 255, 255, 0.09) 0px 32px 16px'}>
-            <Text>1200+ Hours</Text>
-            <Text>Full Stack Coding</Text>
-            </Box>
+          <Box
+            display="flex"
+            flex="1"
+            w={'70%'}
+            flexDirection="column"
+            justifyContent="center"
+            marginTop={{ base: '3', sm: '0' }}>
+            {/* <BlogTags tags={['Engineering', 'Product']} /> */}
+            <Box display={'flex'} justifyContent={'space-between'} textAlign='center' marginBottom={'20px'}>
+              <Box w='30%' padding={'18px'} borderRadius="9px" boxShadow={'rgba(255, 255, 255, 0.17) 0px -23px 25px 0px inset, rgba(255, 255, 255, 0.15) 0px -36px 30px 0px inset, rgba(255, 255, 255, 0.1) 0px -79px 40px 0px inset, rgba(255, 255, 255, 0.06) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px, rgba(255, 255, 255, 0.09) 0px 8px 4px, rgba(255, 255, 255, 0.09) 0px 16px 8px, rgba(255, 255, 255, 0.09) 0px 32px 16px'}>
+              <Text>1200+ Hours</Text>
+              <Text>Full Stack Coding</Text>
+              </Box>
 
-            <Box w='30%' padding={'18px'} borderRadius="9px" boxShadow={'rgba(255, 255, 255, 0.17) 0px -23px 25px 0px inset, rgba(255, 255, 255, 0.15) 0px -36px 30px 0px inset, rgba(255, 255, 255, 0.1) 0px -79px 40px 0px inset, rgba(255, 255, 255, 0.06) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px, rgba(255, 255, 255, 0.09) 0px 8px 4px, rgba(255, 255, 255, 0.09) 0px 16px 8px, rgba(255, 255, 255, 0.09) 0px 32px 16px'}>
-            <Text>4+ Major Projects</Text>
-            <Text>30+ Mini Projects</Text>
-            </Box>
+              <Box w='30%' padding={'18px'} borderRadius="9px" boxShadow={'rgba(255, 255, 255, 0.17) 0px -23px 25px 0px inset, rgba(255, 255, 255, 0.15) 0px -36px 30px 0px inset, rgba(255, 255, 255, 0.1) 0px -79px 40px 0px inset, rgba(255, 255, 255, 0.06) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px, rgba(255, 255, 255, 0.09) 0px 8px 4px, rgba(255, 255, 255, 0.09) 0px 16px 8px, rgba(255, 255, 255, 0.09) 0px 32px 16px'}>
+              <Text>4+ Major Projects</Text>
+              <Text>30+ Mini Projects</Text>
+              </Box>
 
 
-            <Box w='30%' padding={'18px'} borderRadius="9px" boxShadow={'rgba(255, 255, 255, 0.17) 0px -23px 25px 0px inset, rgba(255, 255, 255, 0.15) 0px -36px 30px 0px inset, rgba(255, 255, 255, 0.1) 0px -79px 40px 0px inset, rgba(255, 255, 255, 0.06) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px, rgba(255, 255, 255, 0.09) 0px 8px 4px, rgba(255, 255, 255, 0.09) 0px 16px 8px, rgba(255, 255, 255, 0.09) 0px 32px 16px'}>
-            <Text>100+ Hours</Text>
-            <Text>Soft Skills</Text>
+              <Box w='30%' padding={'18px'} borderRadius="9px" boxShadow={'rgba(255, 255, 255, 0.17) 0px -23px 25px 0px inset, rgba(255, 255, 255, 0.15) 0px -36px 30px 0px inset, rgba(255, 255, 255, 0.1) 0px -79px 40px 0px inset, rgba(255, 255, 255, 0.06) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px, rgba(255, 255, 255, 0.09) 0px 8px 4px, rgba(255, 255, 255, 0.09) 0px 16px 8px, rgba(255, 255, 255, 0.09) 0px 32px 16px'}>
+              <Text>100+ Hours</Text>
+              <Text>Soft Skills</Text>
+              </Box>
             </Box>
+            <Heading marginTop="1">
+              <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
+                Summary
+              </Link>
+            </Heading>
+            <Text
+              as="p"
+              marginTop="2"
+              color={useColorModeValue('gray.700', 'gray.200')}
+              fontSize="lg">
+              Analytical and detail-oriented Full Stack Developer in
+              MERN stack. Adaptable to learning new technologies,
+              accountable team player, and highly productive.
+              Aims to create world-class web applications while
+              facilitating organizations in achieving ambitious
+              goals.
+            </Text>
+            {/* <BlogAuthor name="John Doe" date={new Date('2021-04-06T19:01:27Z')} /> */}
           </Box>
-          <Heading marginTop="1">
-            <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
-              Summary
-            </Link>
-          </Heading>
-          <Text
-            as="p"
-            marginTop="2"
-            color={useColorModeValue('gray.700', 'gray.200')}
-            fontSize="lg">
-            Analytical and detail-oriented Full Stack Developer in
-            MERN stack. Adaptable to learning new technologies,
-            accountable team player, and highly productive.
-            Aims to create world-class web applications while
-            facilitating organizations in achieving ambitious
-            goals.
-          </Text>
-          {/* <BlogAuthor name="John Doe" date={new Date('2021-04-06T19:01:27Z')} /> */}
-        </Box>
       </Box>
       <Divider marginTop="20" />
     </Container>
