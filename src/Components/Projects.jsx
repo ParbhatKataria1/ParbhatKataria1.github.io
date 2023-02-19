@@ -28,7 +28,7 @@ const Projects = () => {
   <SimpleGrid m={'auto'} columns={[2, null, 3]} spacing='40px' w={'81%'} marginTop='70px' marginBottom={'50px'}>
     {
       data.map((el, ind)=>{
-        return <HelperProject key={Date.now()+ind} {...el}  />
+        return <HelperProject className="project-card" key={Date.now()+ind} {...el}  />
       })
     }
   </SimpleGrid>

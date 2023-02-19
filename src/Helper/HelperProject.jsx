@@ -17,7 +17,7 @@ function HelperProject({image, title, techStack, desc, github, deploy}) {
     }
   
     return (
-      <Box class="project-card" maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
+      <Box  maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
         <Box borderRadius="lg" overflow="hidden">
               <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
                 <Image

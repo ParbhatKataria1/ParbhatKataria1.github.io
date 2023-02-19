@@ -16,7 +16,7 @@ export default function Skills() {
         <Box w='40%' border='1px solid white' borderRadius={'12px'} p='12px' boxShadow={'rgba(255, 255, 255, 0.35) 10px 5px 15px;'} >
           {/* here */}
           <Text  fontSize={'23px'}>Teach Stack</Text>
-          <Flex className="skills-card"  flexWrap={'wrap'}>
+          <Flex  flexWrap={'wrap'}>
             <Flex className='skills-card' transition="0.3s ease-in-out"
                   _hover={{
                     transform: 'scale(1.05)',
