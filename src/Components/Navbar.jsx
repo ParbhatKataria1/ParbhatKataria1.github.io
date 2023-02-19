@@ -34,7 +34,7 @@ const NavLink = ({ children }) => (
   </Link>
 );
 
-export default function Nav() {
+export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -43,19 +43,20 @@ export default function Nav() {
   }
   return (
     <>
-      <Box as='header' bg={useColorModeValue('gray.100', 'gray.900')} px={4} position='fixed' w='100%' zIndex={'1000'} top={'0px'} >
+      <Box id="nav-menu" as='header' bg={useColorModeValue('gray.100', 'gray.900')} px={4} position='fixed' w='100%' zIndex={'1000'} top={'0px'} >
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}m='auto' width={'94%'}>
           <Box fontSize={'22px'}>Parbhat</Box>
 
           <Flex alignItems={'center'}>
             <Stack direction={'row'} spacing={12} fontSize='18px' alignItems={'center'}>
-            <Button colorScheme='gray' variant='ghost'>Home</Button>
-            <Button colorScheme='gray' variant='ghost'>About</Button>
-            <Button colorScheme='gray' variant='ghost'>Skills</Button>
-            <Button colorScheme='gray' variant='ghost'>Contact</Button>
+            <Button  class="nav-link home" colorScheme='gray' variant='ghost'>Home</Button>
+            <Button class="nav-link about" colorScheme='gray' variant='ghost'>About</Button>
+            <Button class="nav-link skills" colorScheme='gray' variant='ghost'>Skills</Button>
+            <Button class="nav-link projects" colorScheme='gray' variant='ghost'>Projects</Button>
+            <Button class="nav-link contact" colorScheme='gray' variant='ghost'>Contact</Button>
             
-            <Link href='Parbhat_Resume.pdf' download  onClick={handleResume } target='_blank'>
-              <Button colorScheme='teal' size='md' >
+            <Link  id="resume-link-1" href='Parbhat_Resume.pdf' download  onClick={handleResume } target='_blank'>
+              <Button  id="resume-button-1"  class="nav-link resume" colorScheme='teal' size='md' >
                 <Text mr={'4px'} >Resume</Text> <BiDownload/>
               </Button>
               </Link>

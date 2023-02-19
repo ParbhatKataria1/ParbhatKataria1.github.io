@@ -82,9 +82,9 @@ const TestimonialAvatar = ({
   );
 };
 
-export default function Footer() {
+export default function Contact() {
   return (
-    <Box bg={useColorModeValue('gray.100', 'gray.700')} mt='130px'>
+    <Box id="contact" bg={useColorModeValue('gray.100', 'gray.700')} mt='130px'>
       <Container maxW={'7xl'} py={16} as={Stack} spacing={12}>
         <Stack spacing={0} align={'center'}>
           <Heading>Contact Me</Heading>

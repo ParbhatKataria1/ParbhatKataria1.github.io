@@ -4,7 +4,7 @@ import { BiLinkExternal } from 'react-icons/bi';
 import { BsGithub } from 'react-icons/bs';
 
 
-function HelperProject({image, title, techStack, desc}) {
+function HelperProject({image, title, techStack, desc, github, deploy}) {
     const property = {
       imageUrl: 'https://bit.ly/2Z4KKcF',
       imageAlt: 'Rear view of modern home with pool',
@@ -17,7 +17,7 @@ function HelperProject({image, title, techStack, desc}) {
     }
   
     return (
-      <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
+      <Box class="project-card" maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
         <Box borderRadius="lg" overflow="hidden">
               <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
                 <Image
@@ -37,11 +37,11 @@ function HelperProject({image, title, techStack, desc}) {
             </Box>
   
         <Box p='6'>
-          <Box display='flex' alignItems='baseline'>
+          <Box  display='flex' alignItems='baseline'>
 
 
           {techStack?.map((el, ind)=>{
-            return <Badge key={ind+Date.now()} borderRadius='full' px='2' colorScheme='teal'>{el} </Badge>
+            return <Badge class="project-tech-stack" key={ind+Date.now()} borderRadius='full' px='2' colorScheme='teal'>{el} </Badge>
           })}
             
           </Box>
@@ -52,6 +52,7 @@ function HelperProject({image, title, techStack, desc}) {
             lineHeight='tight'
             noOfLines={2}
             textAlign='left'
+            class="project-title"
           >
            {title}
           </Box>
@@ -63,22 +64,28 @@ function HelperProject({image, title, techStack, desc}) {
             lineHeight='tight'
             noOfLines={2}
             textAlign='left'
+            class="project-description"
           >
            {desc}
           </Box>
   
   
           <Flex mt={'4'} justifyContent='space-between'>
+              <Link class="project-github-link" href={github} isExternal>
             <Button size='sm' colorScheme='teal' variant='solid'>
-            <Text mr={'4px'}>GitHub</Text>
+                <Text mr={'4px'}>GitHub</Text>
               
               <BsGithub/>
             </Button>
+              </Link>
+            
+            <Link class="project-deployed-link" href={deploy} isExternal>
             <Button size='sm' colorScheme='teal' variant='outline'>
               <Text mr={'4px'}>Deployed Link</Text>
               <BiLinkExternal/>
               
             </Button>
+              </Link>
           </Flex>
         </Box>
       </Box>

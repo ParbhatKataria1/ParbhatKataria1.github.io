@@ -48,9 +48,9 @@ export const BlogAuthor = (props) => {
   );
 };
 
-const AboutMe = () => {
+const About = () => {
   return (
-    <Container maxW={'7xl'} p="12" marginTop={'5'}
+    <Container id="about" className="about section" maxW={'7xl'} p="12" marginTop={'5'}
     textAlign='center'
     >
       <Heading mb={'10'} as="h1">About Me</Heading>
@@ -76,6 +76,7 @@ const AboutMe = () => {
             marginLeft={{ base: '0', sm: '5%' }}>
             <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
               <Image
+              class="home-img"
                 borderRadius="50%"
                 src={
                   'PP.jpg'
@@ -139,4 +140,4 @@ const AboutMe = () => {
   );
 };
 
-export default AboutMe;
+export default About;
