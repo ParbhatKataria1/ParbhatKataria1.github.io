@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 import {
   Box,
   Flex,
@@ -37,7 +37,21 @@ const NavLink = ({ children }) => (
 export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
+  useEffect(()=>{
+    toggleColorMode('dark')
+  },[])
 
+
+  const handleClickScroll = (value) => {
+    const element = document.getElementById(value);
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+
+  console.log(colorMode)
   function handleResume(){
     window.open(`https://drive.google.com/file/d/1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer/view`)
   }
@@ -49,11 +63,21 @@ export default function Navbar() {
 
           <Flex alignItems={'center'}>
             <Stack direction={'row'} spacing={12} fontSize='18px' alignItems={'center'}>
-            <Button  class="nav-link home" colorScheme='gray' variant='ghost'>Home</Button>
-            <Button class="nav-link about" colorScheme='gray' variant='ghost'>About</Button>
-            <Button class="nav-link skills" colorScheme='gray' variant='ghost'>Skills</Button>
-            <Button class="nav-link projects" colorScheme='gray' variant='ghost'>Projects</Button>
-            <Button class="nav-link contact" colorScheme='gray' variant='ghost'>Contact</Button>
+              
+            <Button onClick={()=>{handleClickScroll('home')}} class="nav-link home" colorScheme='gray' variant='ghost'>Home</Button>
+            
+
+            <Button class="nav-link about" colorScheme='gray'onClick={()=>{handleClickScroll('about')}} variant='ghost'>About</Button>
+
+            <Button class="nav-link skills" onClick={()=>{handleClickScroll('skills')}} colorScheme='gray' variant='ghost'>Skills</Button>
+
+            
+            <Button class="nav-link projects" onClick={()=>{handleClickScroll('projects')}} colorScheme='gray' variant='ghost'>Projects</Button>
+            
+
+            
+            <Button onClick={()=>{handleClickScroll('contact')}} class="nav-link contact" colorScheme='gray' variant='ghost'>Contact</Button>
+            
             
             <Link  id="resume-link-1" href='Parbhat_Resume.pdf' download  onClick={handleResume } target='_blank'>
               <Button  id="resume-button-1"  class="nav-link resume" colorScheme='teal' size='md' >

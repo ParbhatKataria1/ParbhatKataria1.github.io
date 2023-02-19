@@ -10,9 +10,9 @@ import {
 
 export default function Skills() {
   return (
-    <Center id="skills" py={12} flexDirection='column'>
+    <Center pt={100}  id="skills"  flexDirection='column'>
       <Heading>Tech Stack And Developer Tools</Heading>
-      <Flex justifyContent={'space-around'} w='90%' marginTop={'55px'}>
+      <Flex justifyContent={'space-around'} w='90%' marginTop={'85px'}>
         <Box w='40%' border='1px solid white' borderRadius={'12px'} p='12px' boxShadow={'rgba(255, 255, 255, 0.35) 10px 5px 15px;'} >
           {/* here */}
           <Text  fontSize={'23px'}>Teach Stack</Text>

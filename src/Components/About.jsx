@@ -50,7 +50,7 @@ export const BlogAuthor = (props) => {
 
 const About = () => {
   return (
-    <Container id="about" className="about section" maxW={'7xl'} p="12" marginTop={'5'}
+    <Container id="about" className="about section" maxW={'7xl'} p="12" pt={'20'}
     textAlign='center'
     >
       <Heading mb={'10'} as="h1">About Me</Heading>

@@ -45,7 +45,7 @@ export default function Home() {
     window.open(`https://drive.google.com/file/d/1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer/view`)
   }
   return (
-    <Container id="home" maxW={'80%'} mt={'40px'} py={12}>
+    <Container id="home" maxW={'80%'} mt={'40px'} py={12} >
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
         <Stack spacing={4} justifyContent='center'>
           <Text

@@ -23,7 +23,7 @@ const Projects = () => {
   return (
     // Passing `columns={[2, null, 3]}` and `columns={{sm: 2, md: 3}}`
 // will have the same effect.
-<Box id="projects" textAlign={'center'} marginTop='130px'>
+<Box id="projects" textAlign={'center'} pt='130px' mt={'10'}>
     <Heading>Projects</Heading>
   <SimpleGrid m={'auto'} columns={[2, null, 3]} spacing='40px' w={'81%'} marginTop='70px' marginBottom={'50px'}>
     {
