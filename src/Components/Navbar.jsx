@@ -1,4 +1,4 @@
-import { ReactNode, useEffect } from 'react';
+import { React,ReactNode, useEffect, useRef } from 'react';
 import {
   Box,
   Flex,
@@ -9,6 +9,7 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
+  Input,
   MenuDivider,
   useDisclosure,
   useColorModeValue,
@@ -17,8 +18,11 @@ import {
   Center,
   Text,
 } from '@chakra-ui/react';
-import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+
+
+import { MoonIcon, SunIcon, HamburgerIcon } from '@chakra-ui/icons';
 import { BiDownload } from 'react-icons/bi';
+import DrawerExample from './SideBar';
 
 const NavLink = ({ children }) => (
   <Link
@@ -59,10 +63,10 @@ export default function Navbar() {
     <>
       <Box id="nav-menu" as='header' bg={useColorModeValue('gray.100', 'gray.900')} px={4} position='fixed' w='100%' zIndex={'1000'} top={'0px'} >
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}m='auto' width={'94%'}>
-          <Box fontSize={'22px'}>Parbhat</Box>
+          <Box w={{base:'50%',sm:'20%'}} fontSize={'22px'}>Parbhat</Box>
 
-          <Flex alignItems={'center'}>
-            <Stack direction={'row'} spacing={12} fontSize='18px' alignItems={'center'}>
+          <Flex w='70%' display={{base:'none', lg:'block'}} alignItems={'center'} justifyContent='end'>
+            <Flex w='100%' justifyContent={'space-between'} direction={'row'}  fontSize='18px' alignItems={'center'}>
               
             <Button onClick={()=>{handleClickScroll('home')}} class="nav-link home" colorScheme='gray' variant='ghost'>Home</Button>
             
@@ -89,10 +93,20 @@ export default function Navbar() {
               </Button>
 
               
-            </Stack>
+            </Flex>
           </Flex>
+
+          <Box display={{base:'block', lg:'none'}} >
+          <Flex w='100%' justifyContent={'space-between'} direction={'column'}  fontSize='18px' alignItems={'center'}>
+            
+            <DrawerExample handleClickScroll={handleClickScroll} handleResume={handleResume}/>
+          </Flex>
+          </Box>
         </Flex>
       </Box>
     </>
   );
 }
+
+
+
