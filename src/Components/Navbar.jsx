@@ -1,4 +1,4 @@
-import { React,ReactNode, useEffect, useRef } from 'react';
+import { React, ReactNode, useEffect, useRef } from "react";
 import {
   Box,
   Flex,
@@ -17,23 +17,23 @@ import {
   useColorMode,
   Center,
   Text,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 
-
-import { MoonIcon, SunIcon, HamburgerIcon } from '@chakra-ui/icons';
-import { BiDownload } from 'react-icons/bi';
-import DrawerExample from './SideBar';
+import { MoonIcon, SunIcon, HamburgerIcon } from "@chakra-ui/icons";
+import { BiDownload } from "react-icons/bi";
+import DrawerExample from "./SideBar";
 
 const NavLink = ({ children }) => (
   <Link
     px={2}
     py={1}
-    rounded={'md'}
+    rounded={"md"}
     _hover={{
-      textDecoration: 'none',
-      bg: useColorModeValue('gray.200', 'gray.700'),
+      textDecoration: "none",
+      bg: useColorModeValue("gray.200", "gray.700"),
     }}
-    href={'#'}>
+    href={"#"}
+  >
     {children}
   </Link>
 );
@@ -41,72 +41,148 @@ const NavLink = ({ children }) => (
 export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
-  useEffect(()=>{
-    toggleColorMode('dark')
-  },[])
-
+  useEffect(() => {
+    toggleColorMode("dark");
+  }, []);
 
   const handleClickScroll = (value) => {
     const element = document.getElementById(value);
     if (element) {
       // 👇 Will scroll smoothly to the top of the next section
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
-
-  console.log(colorMode)
-  function handleResume(){
-    window.open(`https://drive.google.com/file/d/1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer/view`)
+  console.log(colorMode);
+  function handleResume() {
+    window.open(
+      `https://drive.google.com/file/d/1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer/view`
+    );
   }
   return (
     <>
-      <Box id="nav-menu" as='header' bg={useColorModeValue('gray.100', 'gray.900')} px={4} position='fixed' w='100%' zIndex={'1000'} top={'0px'} >
-        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}m='auto' width={'94%'}>
-          <Box w={{base:'50%',sm:'20%'}} fontSize={'22px'}>Parbhat</Box>
+      <Box
+        as="header"
+        bg={useColorModeValue("gray.100", "gray.900")}
+        px={4}
+        position="fixed"
+        w="100%"
+        zIndex={"1000"}
+        top={"0px"}
+      >
+        <Flex
+          h={16}
+          alignItems={"center"}
+          justifyContent={"space-between"}
+          m="auto"
+          width={"94%"}
+        >
+          <Box w={{ base: "50%", sm: "20%" }} fontSize={"22px"}>
+            Parbhat
+          </Box>
 
-          <Flex w='70%' display={{base:'none', lg:'block'}} alignItems={'center'} justifyContent='end'>
-            <Flex w='100%' justifyContent={'space-between'} direction={'row'}  fontSize='18px' alignItems={'center'}>
-              
-            <Button onClick={()=>{handleClickScroll('home')}} class="nav-link home" colorScheme='gray' variant='ghost'>Home</Button>
-            
-
-            <Button class="nav-link about" colorScheme='gray'onClick={()=>{handleClickScroll('about')}} variant='ghost'>About</Button>
-
-            <Button class="nav-link skills" onClick={()=>{handleClickScroll('skills')}} colorScheme='gray' variant='ghost'>Skills</Button>
-
-            
-            <Button class="nav-link projects" onClick={()=>{handleClickScroll('projects')}} colorScheme='gray' variant='ghost'>Projects</Button>
-            
-
-            
-            <Button onClick={()=>{handleClickScroll('contact')}} class="nav-link contact" colorScheme='gray' variant='ghost'>Contact</Button>
-            
-            
-            <Link  id="resume-link-1" href='Parbhat_Resume.pdf' download  onClick={handleResume } target='_blank'>
-              <Button  id="resume-button-1"  class="nav-link resume" colorScheme='teal' size='md' >
-                <Text mr={'4px'} >Resume</Text> <BiDownload/>
+          <Flex
+            w="70%"
+            display={{ base: "none", lg: "block" }}
+            alignItems={"center"}
+            justifyContent="end"
+          >
+            <Flex
+              id="nav-menu"
+              w="100%"
+              justifyContent={"space-between"}
+              direction={"row"}
+              fontSize="18px"
+              alignItems={"center"}
+            >
+              <Button
+                onClick={() => {
+                  handleClickScroll("home");
+                }}
+                colorScheme="gray"
+                variant="ghost"
+              >
+                <Link className="nav-link home">Home</Link>
               </Button>
+
+              <Button
+                colorScheme="gray"
+                onClick={() => {
+                  handleClickScroll("about");
+                }}
+                variant="ghost"
+              >
+                <Link className="nav-link about">About</Link>
+              </Button>
+
+              <Button
+                onClick={() => {
+                  handleClickScroll("skills");
+                }}
+                colorScheme="gray"
+                variant="ghost"
+              >
+                <Link className="nav-link skills">Skills</Link>
+              </Button>
+
+              <Button
+                onClick={() => {
+                  handleClickScroll("projects");
+                }}
+                colorScheme="gray"
+                variant="ghost"
+              >
+                <Link className="nav-link projects">Projects</Link>
+              </Button>
+
+              <Button
+                onClick={() => {
+                  handleClickScroll("contact");
+                }}
+                colorScheme="gray"
+                variant="ghost"
+              >
+                <Link className="nav-link contact">Contact</Link>
+              </Button>
+
+              <Link
+                id="resume-link-1"
+                href="Parbhat_Resume.pdf"
+                download
+                onClick={handleResume}
+                target="_blank"
+              >
+                <Button
+                  id="resume-button-1"
+                  class="nav-link resume"
+                  colorScheme="teal"
+                  size="md"
+                >
+                  <Text mr={"4px"}>Resume</Text> <BiDownload />
+                </Button>
               </Link>
               <Button onClick={toggleColorMode}>
-                {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+                {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
               </Button>
-
-              
             </Flex>
           </Flex>
 
-          <Box display={{base:'block', lg:'none'}} >
-          <Flex w='100%' justifyContent={'space-between'} direction={'column'}  fontSize='18px' alignItems={'center'}>
-            
-            <DrawerExample handleClickScroll={handleClickScroll} handleResume={handleResume}/>
-          </Flex>
+          <Box display={{ base: "block", lg: "none" }}>
+            <Flex
+              w="100%"
+              justifyContent={"space-between"}
+              direction={"column"}
+              fontSize="18px"
+              alignItems={"center"}
+            >
+              <DrawerExample
+                handleClickScroll={handleClickScroll}
+                handleResume={handleResume}
+              />
+            </Flex>
           </Box>
         </Flex>
       </Box>
     </>
   );
 }
-
-
-
