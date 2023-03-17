@@ -26,6 +26,7 @@ function HelperProject({ image, title, techStack, desc, github, deploy }) {
 
   return (
     <Box
+      className="project-card"
       maxW="sm"
       m="auto"
       w="100%"

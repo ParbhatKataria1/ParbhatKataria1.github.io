@@ -84,13 +84,13 @@ export default function Home() {
               <Heading id="user-detail-name">Parbhat</Heading>
             </Box>
             <Text fontSize={"21px"}>Full Stack Web Developer</Text>
-            <Text fontSize={"lg"}>
+            <Text id="user-detail-intro" fontSize={"lg"}>
               Analytical and detail-oriented Full Stack Developer in MERN stack.
               Adaptable to learning new technologies, accountable team player,
               and highly productive. Aims to create world-class web applications
               while facilitating organizations in achieving ambitious goals.
             </Text>
-            <Stack id="user-detail-intro">
+            <Stack>
               <Stack
                 h="14"
                 spacing={4}
@@ -109,8 +109,11 @@ export default function Home() {
                   onClick={handleResume}
                   target="_blank"
                 >
-                  <Button id="resume-button-2" colorScheme="teal" size="md">
-                    <Text mr={"4px"}>Resume</Text> <BiDownload />
+                  <Button colorScheme="teal" size="md">
+                    <Text id="resume-button-2" mr={"4px"}>
+                      Resume
+                    </Text>{" "}
+                    <BiDownload />
                   </Button>
                 </Link>
                 <Flex justifyContent={"space-around"} w="25%">

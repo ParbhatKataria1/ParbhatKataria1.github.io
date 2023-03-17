@@ -50,9 +50,10 @@ export const BlogAuthor = (props) => {
 const About = () => {
   return (
     <>
-      <Box id="about" h="60px"></Box>
+      <Box h="60px"></Box>
       <Container
         maxW={{ base: "97%", lg: "90%" }}
+        id="about"
         className="about section"
         p={{ base: "2", sm: "12" }}
         textAlign="center"

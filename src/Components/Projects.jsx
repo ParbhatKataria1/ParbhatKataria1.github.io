@@ -40,13 +40,7 @@ const Projects = () => {
         marginBottom={"50px"}
       >
         {data.map((el, ind) => {
-          return (
-            <HelperProject
-              className="project-card"
-              key={Date.now() + ind}
-              {...el}
-            />
-          );
+          return <HelperProject key={Date.now() + ind} {...el} />;
         })}
       </SimpleGrid>
     </Box>

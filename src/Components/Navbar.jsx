@@ -152,13 +152,11 @@ export default function Navbar() {
                 onClick={handleResume}
                 target="_blank"
               >
-                <Button
-                  id="resume-button-1"
-                  class="nav-link resume"
-                  colorScheme="teal"
-                  size="md"
-                >
-                  <Text mr={"4px"}>Resume</Text> <BiDownload />
+                <Button id="resume-button-1" colorScheme="teal" size="md">
+                  <Link class="nav-link resume">
+                    <Text mr={"4px"}>Resume</Text>
+                  </Link>
+                  <BiDownload />
                 </Button>
               </Link>
               <Button onClick={toggleColorMode}>
