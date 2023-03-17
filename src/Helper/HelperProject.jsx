@@ -8,6 +8,7 @@ import {
   Link,
   Text,
   Heading,
+  Code,
 } from "@chakra-ui/react";
 import { BiLinkExternal } from "react-icons/bi";
 import { BsGithub } from "react-icons/bs";
@@ -52,32 +53,40 @@ function HelperProject({ image, title, techStack, desc, github, deploy }) {
       </Box>
 
       <Box p="6">
-        <Box display="flex" alignItems="baseline">
+        <Box display="flex" flexWrap={"wrap"} alignItems="baseline">
           {techStack?.map((el, ind) => {
             return (
-              <Badge
-                class="project-tech-stack"
-                key={ind + Date.now()}
-                borderRadius="full"
-                px="2"
-                colorScheme="teal"
+              <Code
+                mr="10px"
+                fontSize={"14px"}
+                borderRadius="50px"
+                px="10px"
+                mb="4px"
+                colorScheme={"teal"}
               >
-                {el}{" "}
-              </Badge>
+                <Badge
+                  class="project-tech-stack"
+                  key={ind + Date.now()}
+                  borderRadius="full"
+                  colorScheme="teal"
+                >
+                  {el}{" "}
+                </Badge>
+              </Code>
             );
           })}
         </Box>
-        <Box
+        <Text
           mt="4"
           fontWeight="bold"
           as="h4"
           lineHeight="tight"
           noOfLines={2}
           textAlign="left"
-          class="project-title"
+          className="project-title"
         >
           {title}
-        </Box>
+        </Text>
 
         <Box
           mt="4"

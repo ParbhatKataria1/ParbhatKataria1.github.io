@@ -84,7 +84,7 @@ export default function Home() {
               <Heading id="user-detail-name">Parbhat</Heading>
             </Box>
             <Text fontSize={"21px"}>Full Stack Web Developer</Text>
-            <Text id="user-detail-intro" fontSize={"lg"}>
+            <Text fontSize={"lg"}>
               Analytical and detail-oriented Full Stack Developer in MERN stack.
               Adaptable to learning new technologies, accountable team player,
               and highly productive. Aims to create world-class web applications

@@ -2,27 +2,6 @@ import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
 import React from "react";
 import HelperProject from "../Helper/HelperProject";
 
-let data = [
-  {
-    image:
-      "https://serving.photos.photobox.com/78056824e1d2dcb063cf8a5ea1341a6907cb7b0db09d946e3a34b0372449333665356f22.jpg",
-    title: "Sugar Cosmetics Clone",
-    desc: "It is a beauty product-based website which is used to order cosmetic products",
-    techStack: ["HTML", "CSS", "JavaScript", "JQuery"],
-    github: "https://github.com/ParbhatKataria1/money-zephyr-6413",
-    deploy: "https://gleeful-lebkuchen-052b83.netlify.app/",
-  },
-  {
-    image:
-      "https://serving.photos.photobox.com/4315878941189d29f37cdb91e3aae0780f8c84e24e9a2df8c15c13d1be664bbffb5fec01.jpg",
-    desc: "It is a hotel booking website for vacations",
-    title: "Tripvillas Clone",
-    techStack: ["HTML", "CSS", "JavaScript", "JQuery"],
-    github: "https://github.com/ParbhatKataria1/longing-fairies-6305",
-    deploy: "https://shiny-klepon-a49c07.netlify.app/",
-  },
-];
-
 const Projects = () => {
   return (
     // Passing `columns={[2, null, 3]}` and `columns={{sm: 2, md: 3}}`
@@ -46,5 +25,54 @@ const Projects = () => {
     </Box>
   );
 };
+
+let data = [
+  {
+    image:
+      "https://serving.photos.photobox.com/78056824e1d2dcb063cf8a5ea1341a6907cb7b0db09d946e3a34b0372449333665356f22.jpg",
+    title: "Sugar Cosmetics Clone",
+    desc: "It is a beauty product-based website which is used to order cosmetic products",
+    techStack: ["HTML", "CSS", "JavaScript", "JQuery"],
+    github: "https://github.com/ParbhatKataria1/money-zephyr-6413",
+    deploy: "https://gleeful-lebkuchen-052b83.netlify.app/",
+  },
+  {
+    image:
+      "https://serving.photos.photobox.com/4315878941189d29f37cdb91e3aae0780f8c84e24e9a2df8c15c13d1be664bbffb5fec01.jpg",
+    desc: "It is a hotel booking website for vacations",
+    title: "Tripvillas Clone",
+    techStack: ["HTML", "CSS", "JavaScript", "JQuery"],
+    github: "https://github.com/ParbhatKataria1/longing-fairies-6305",
+    deploy: "https://shiny-klepon-a49c07.netlify.app/",
+  },
+  {
+    image: "unit5project.png",
+    desc: "Sunglow Fashion is an e-commerce platform to buy clothes and fashion products.",
+    title: "Sunglow Fashion",
+    techStack: [
+      "Next.Js",
+      "Chakra UI",
+      "Google Authentication",
+      "Redux",
+      "JSON - Server",
+    ],
+    github: "https://github.com/ParbhatKataria1/responsible-act-7116",
+    deploy: "https://unit-5-frontend-deployement.netlify.app/",
+  },
+  {
+    image: "unit5project.png",
+    desc: "Sunglow Fashion is an e-commerce platform to buy clothes and fashion products.",
+    title: "Sunglow Fashion",
+    techStack: [
+      "Next.Js",
+      "Chakra UI",
+      "Google Authentication",
+      "Redux",
+      "JSON - Server",
+    ],
+    github: "https://github.com/ParbhatKataria1/responsible-act-7116",
+    deploy: "https://unit-5-frontend-deployement.netlify.app/",
+  },
+];
 
 export default Projects;

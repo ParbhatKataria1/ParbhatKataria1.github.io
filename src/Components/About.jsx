@@ -158,6 +158,7 @@ const About = () => {
               marginTop="2"
               color={useColorModeValue("gray.700", "gray.200")}
               fontSize="lg"
+              id="user-detail-intro"
             >
               Analytical and detail-oriented Full Stack Developer in MERN stack.
               Adaptable to learning new technologies, accountable team player,

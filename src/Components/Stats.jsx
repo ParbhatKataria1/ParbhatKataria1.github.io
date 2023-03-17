@@ -52,7 +52,7 @@ const Stats = () => {
             <Flex justifyContent={"center"}>
               <Image
                 id="github-top-langs"
-                src="https://github-readme-stats.vercel.app/api/top-langs/?username=YAKSHITH027&layout=compact&theme=radical"
+                src="https://github-readme-stats.vercel.app/api/top-langs/?username=ParbhatKataria1&layout=compact&theme=radical"
               ></Image>
             </Flex>
           </Link>
