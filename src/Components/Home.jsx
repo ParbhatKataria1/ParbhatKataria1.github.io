@@ -109,11 +109,11 @@ export default function Home() {
                   onClick={handleResume}
                   target="_blank"
                 >
-                  <Button colorScheme="teal" size="md">
-                    <Text id="resume-button-2" mr={"4px"}>
-                      Resume
+                  <Button id="resume-button-2" colorScheme="teal" size="md">
+                    Resume
+                    <Text mr={"4px"}>
+                      <BiDownload />
                     </Text>{" "}
-                    <BiDownload />
                   </Button>
                 </Link>
                 <Flex justifyContent={"space-around"} w="25%">

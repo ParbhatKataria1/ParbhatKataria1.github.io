@@ -14,17 +14,6 @@ import { BiLinkExternal } from "react-icons/bi";
 import { BsGithub } from "react-icons/bs";
 
 function HelperProject({ image, title, techStack, desc, github, deploy }) {
-  const property = {
-    imageUrl: "https://bit.ly/2Z4KKcF",
-    imageAlt: "Rear view of modern home with pool",
-    beds: 3,
-    baths: 2,
-    title: "Modern home in city center in the heart of historic Los Angeles",
-    formattedPrice: "$1,900.00",
-    reviewCount: 34,
-    rating: 4,
-  };
-
   return (
     <Box
       className="project-card"
@@ -88,17 +77,17 @@ function HelperProject({ image, title, techStack, desc, github, deploy }) {
           {title}
         </Text>
 
-        <Box
+        <Text
           mt="4"
           fontWeight="semibold"
           as="h4"
           lineHeight="tight"
           noOfLines={2}
           textAlign="left"
-          class="project-description"
+          className="project-description"
         >
           {desc}
-        </Box>
+        </Text>
 
         <Flex mt={"4"} justifyContent={"space-between"}>
           <Link class="project-github-link" href={github} isExternal>
