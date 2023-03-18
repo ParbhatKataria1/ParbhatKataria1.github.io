@@ -152,7 +152,12 @@ export default function Navbar() {
                 onClick={handleResume}
                 target="_blank"
               >
-                <Button id="resume-button-1" colorScheme="teal" size="md">
+                <Button
+                  className="nav-link resume"
+                  id="resume-button-1"
+                  colorScheme="teal"
+                  size="md"
+                >
                   Resume
                   <Text mr={"4px"}>
                     <BiDownload />
