@@ -146,7 +146,7 @@ export default function Navbar() {
               </Button>
 
               <Link
-                id="resume-button-1"
+                // id="resume-link-1"
                 href="Parbhat_Resume.pdf"
                 download
                 onClick={handleResume}
@@ -154,7 +154,7 @@ export default function Navbar() {
               >
                 <Button
                   className="nav-link resume"
-                  id="resume-link-1"
+                  id="resume-button-1"
                   colorScheme="teal"
                   size="md"
                 >
