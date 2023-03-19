@@ -154,12 +154,12 @@ export default function Navbar() {
               >
                 <Button
                   className="nav-link resume"
-                  id="resume-button-1"
+                  id="resume-button-2"
                   colorScheme="teal"
                   size="md"
                 >
-                  Resume
                   <Text mr={"4px"}>
+                    Resume
                     <BiDownload />
                   </Text>
                 </Button>

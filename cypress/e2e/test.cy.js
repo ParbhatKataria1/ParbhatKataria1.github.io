@@ -325,7 +325,7 @@ describe("Test", function () {
 
       it(`Check if resume button in Resume section is downloading a PDF file`, () => {
         cy.task("deleteFilesIn", "cypress/downloads").then(() => {
-          cy.get('[id="resume-button-1"]').then(($elem) => {
+            cy.get('[id="resume-button-1"]').then(($elem) => {
             if ($elem.find("a").length === 1) {
               cy.wrap($elem).within(() => {
                 cy.get('[id="resume-link-1"]').then(($anchor) => {

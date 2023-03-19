@@ -81,6 +81,8 @@ const About = () => {
               textAlign={"center"}
               m="auto"
               zIndex="2"
+              border="4px solid whiteAlpha"
+              borderRadius="20%"
             >
               <Image
                 textAlign={"center"}

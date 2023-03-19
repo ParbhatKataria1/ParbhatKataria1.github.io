@@ -109,9 +109,9 @@ export default function Home() {
                   onClick={handleResume}
                   target="_blank"
                 >
-                  <Button id="resume-button-2" colorScheme="teal" size="md">
-                    Resume
+                  <Button id="resume-button-1" colorScheme="teal" size="md">
                     <Text mr={"4px"}>
+                      Resume
                       <BiDownload />
                     </Text>{" "}
                   </Button>

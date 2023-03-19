@@ -59,8 +59,10 @@ export default function DrawerExample({ handleClickScroll, handleResume }) {
                   ml="20px"
                   variant="solid"
                 >
-                  <Flex alignItems={"center"}>
-                    <Text mr={"4px"}>Resume</Text> <BiDownload />
+                  <Flex ml="10px" alignItems={"center"}>
+                    <Button>
+                      <Text mr={"4px"}>Resume</Text> <BiDownload />
+                    </Button>
                   </Flex>
                 </Button>
               </Link>
