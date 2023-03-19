@@ -113,7 +113,7 @@ export default function Home() {
                     <Text mr={"4px"}>
                       Resume
                       <BiDownload />
-                    </Text>{" "}
+                    </Text>
                   </Button>
                 </Link>
                 <Flex justifyContent={"space-around"} w="25%">
