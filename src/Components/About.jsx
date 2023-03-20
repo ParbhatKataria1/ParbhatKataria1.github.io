@@ -155,11 +155,11 @@ const About = () => {
               <Link textDecoration="none" _hover={{ textDecoration: "none" }}>
                 Summary
               </Link>
-              <Button
+              {/* <Button
                 id="resume-button-2"
                 colorScheme="teal"
                 size="md"
-              ></Button>
+              ></Button> */}
             </Heading>
             <Text
               as="p"
