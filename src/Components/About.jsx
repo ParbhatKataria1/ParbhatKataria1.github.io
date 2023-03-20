@@ -15,6 +15,7 @@ import {
   Container,
   VStack,
   Flex,
+  Button,
 } from "@chakra-ui/react";
 
 const BlogTags = (props) => {
@@ -154,6 +155,11 @@ const About = () => {
               <Link textDecoration="none" _hover={{ textDecoration: "none" }}>
                 Summary
               </Link>
+              <Button
+                id="resume-button-2"
+                colorScheme="teal"
+                size="md"
+              ></Button>
             </Heading>
             <Text
               as="p"
