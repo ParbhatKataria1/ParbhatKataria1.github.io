@@ -141,27 +141,26 @@ export default function Navbar() {
               >
                 <Link className="nav-link contact">Contact</Link>
               </Button>
-
-              <Link
-                // id="resume-link-1"
-                href="Parbhat_Resume.pdf"
-                download
-                // onClick={handleResume}
-                target="_blank"
+              <Button
+                onClick={handleResume}
+                className="nav-link resume"
+                id="resume-button-1"
+                colorScheme="teal"
+                size="md"
               >
-                <Button
-                  onClick={handleResume}
-                  className="nav-link resume"
-                  id="resume-button-1"
-                  colorScheme="teal"
-                  size="md"
+                <Link
+                  // id="resume-link-1"
+                  href="Parbhat_Resume.pdf"
+                  download
+                  // onClick={handleResume}
+                  target="_blank"
                 >
                   Resume
                   <Text mr={"4px"} ml="10px">
                     <BiDownload />
                   </Text>
-                </Button>
-              </Link>
+                </Link>
+              </Button>
               <Button onClick={toggleColorMode}>
                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
               </Button>

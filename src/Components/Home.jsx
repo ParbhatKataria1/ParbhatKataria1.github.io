@@ -101,20 +101,20 @@ export default function Home() {
                   />
                 }
               >
-                <Link
-                  // id="resume-link-2"
-                  href="Parbhat_Resume.pdf"
-                  id="resume-button-2"
-                  download
-                  target="_blank"
-                >
-                  <Button onClick={handleResume} colorScheme="teal" size="md">
+                <Button onClick={handleResume} colorScheme="teal" size="md">
+                  <Link
+                    // id="resume-link-2"
+                    href="Parbhat_Resume.pdf"
+                    id="resume-button-2"
+                    download
+                    target="_blank"
+                  >
                     Resume
                     <Text mr={"4px"} ml="10px">
                       <BiDownload />
                     </Text>
-                  </Button>
-                </Link>
+                  </Link>
+                </Button>
                 <Flex justifyContent={"space-around"} w="25%">
                   <Link
                     m="5px"
