@@ -39,14 +39,14 @@ const Feature = ({ text, icon, iconBg }) => {
     </Stack>
   );
 };
-
+export function handleResume() {
+  window.open(
+    `https://drive.google.com/file/d/1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer/view`
+  );
+}
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode();
-  function handleResume() {
-    window.open(
-      `https://drive.google.com/file/d/1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer/view`
-    );
-  }
+
   return (
     <>
       <Box id="home" h="30px"></Box>
@@ -86,9 +86,8 @@ export default function Home() {
             <Text fontSize={"21px"}>Full Stack Web Developer</Text>
             <Text fontSize={"lg"}>
               Analytical and detail-oriented Full Stack Developer in MERN stack.
-              Adaptable to learning new technologies, accountable team player,
-              and highly productive. Aims to create world-class web applications
-              while facilitating organizations in achieving ambitious goals.
+              Aims to create world-class web applications while facilitating
+              organizations in achieving ambitious goals.
             </Text>
             <Stack>
               <Stack
@@ -107,12 +106,11 @@ export default function Home() {
                   href="Parbhat_Resume.pdf"
                   id="resume-button-2"
                   download
-                  onClick={handleResume}
                   target="_blank"
                 >
-                  <Button colorScheme="teal" size="md">
-                    <Text mr={"4px"}>
-                      Resume
+                  <Button onClick={handleResume} colorScheme="teal" size="md">
+                    Resume
+                    <Text mr={"4px"} ml="10px">
                       <BiDownload />
                     </Text>
                   </Button>
@@ -185,22 +183,26 @@ export default function Home() {
                     +91 6284-333-505
                   </Text>
                 </Flex>
-
-                <Flex mt={{ base: "20px", sm: "0px" }}>
-                  <svg
-                    fill="white"
-                    width="24"
-                    height="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                  >
-                    <path d="M24 21h-24v-18h24v18zm-23-16.477v15.477h22v-15.477l-10.999 10-11.001-10zm21.089-.523h-20.176l10.088 9.171 10.088-9.171z" />
-                  </svg>
-                  <Text id="contact-email" ml={"10px"}>
-                    varshagagangandhi@gmail.com
-                  </Text>
-                </Flex>
+                <Link
+                  href="mailto:parbhatkataria628@gmail.com"
+                  cursor={"pointer"}
+                >
+                  <Flex mt={{ base: "20px", sm: "0px" }}>
+                    <svg
+                      fill="white"
+                      width="24"
+                      height="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                    >
+                      <path d="M24 21h-24v-18h24v18zm-23-16.477v15.477h22v-15.477l-10.999 10-11.001-10zm21.089-.523h-20.176l10.088 9.171 10.088-9.171z" />
+                    </svg>
+                    <Text id="contact-email" ml={"10px"}>
+                      varshagagangandhi@gmail.com
+                    </Text>
+                  </Flex>
+                </Link>
               </Stack>
             </Stack>
           </Stack>

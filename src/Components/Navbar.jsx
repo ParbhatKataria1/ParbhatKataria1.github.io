@@ -22,6 +22,7 @@ import {
 import { MoonIcon, SunIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { BiDownload } from "react-icons/bi";
 import DrawerExample from "./SideBar";
+import { handleResume } from "./Home";
 
 const NavLink = ({ children }) => (
   <Link
@@ -54,11 +55,7 @@ export default function Navbar() {
   };
 
   console.log(colorMode);
-  function handleResume() {
-    window.open(
-      `https://drive.google.com/file/d/1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer/view`
-    );
-  }
+
   return (
     <>
       <Box
@@ -149,17 +146,18 @@ export default function Navbar() {
                 // id="resume-link-1"
                 href="Parbhat_Resume.pdf"
                 download
-                onClick={handleResume}
+                // onClick={handleResume}
                 target="_blank"
               >
                 <Button
+                  onClick={handleResume}
                   className="nav-link resume"
                   id="resume-button-1"
                   colorScheme="teal"
                   size="md"
                 >
-                  <Text mr={"4px"}>
-                    Resume
+                  Resume
+                  <Text mr={"4px"} ml="10px">
                     <BiDownload />
                   </Text>
                 </Button>
