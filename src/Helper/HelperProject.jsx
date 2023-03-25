@@ -12,10 +12,17 @@ import {
 } from "@chakra-ui/react";
 import { BiLinkExternal } from "react-icons/bi";
 import { BsGithub } from "react-icons/bs";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function HelperProject({ image, title, techStack, desc, github, deploy }) {
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: false, mirror: true });
+  }, []);
   return (
     <Box
+      data-aos="fade-up"
       className="project-card slideTop"
       maxW="sm"
       m="auto"

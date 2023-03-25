@@ -7,11 +7,17 @@ import {
   Image,
   Text,
 } from "@chakra-ui/react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function Skills() {
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: false, mirror: true, offset: 90 });
+  }, []);
   return (
     <Center m="auto" pt={100} w="95%" id="skills" flexDirection="column">
-      <Heading className="slideTop">Tech Stack And Developer Tools</Heading>
+      <Heading data-aos="fade-up">Tech Stack And Developer Tools</Heading>
       <Flex
         justifyContent={"space-around"}
         direction={{ base: "column", lg: "row" }}
@@ -19,7 +25,7 @@ export default function Skills() {
       >
         <Box
           mr="20px"
-          className="slideLeft"
+          data-aos="fade-right"
           w={{ base: "100%", lg: "50%" }}
           borderRadius={"12px"}
           p="12px"
@@ -229,7 +235,7 @@ export default function Skills() {
           </Grid>
         </Box>
         <Box
-          className="slideRight"
+          data-aos="fade-left"
           w={{ base: "100%", lg: "50%" }}
           mt={{ base: "20px", lg: "0px" }}
           borderRadius={"12px"}

@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import {
   Box,
   Flex,
@@ -10,6 +10,8 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import ContactForm from "../Helper/ContactForm";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Testimonial = ({ children }) => {
   return <Box>{children}</Box>;
@@ -82,6 +84,9 @@ const TestimonialAvatar = ({ src, name, title }) => {
 };
 
 export default function Contact() {
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: false, mirror: true });
+  }, []);
   return (
     <Box
       id="contact"
@@ -90,13 +95,13 @@ export default function Contact() {
       mt="100px"
     >
       <Container maxW={"7xl"} py={16} as={Stack} spacing={12}>
-        <Stack className="slideTop" spacing={0} align={"center"}>
+        <Stack data-aos="fade-up" spacing={0} align={"center"}>
           <Heading>Contact Me</Heading>
           <Text>We have been working with clients around the world</Text>
         </Stack>
         <Flex>
           <Stack
-            className="slideLeft"
+            data-aos="fade-right"
             w={"50%"}
             display={{ base: "none", md: "block" }}
             mr="20px"
@@ -137,7 +142,9 @@ export default function Contact() {
               />
             </Testimonial>
           </Stack>
-          <ContactForm />
+          <Box data-aos="fade-left">
+            <ContactForm />
+          </Box>
         </Flex>
       </Container>
     </Box>

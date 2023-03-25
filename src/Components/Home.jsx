@@ -1,5 +1,7 @@
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 import {
   Container,
@@ -51,7 +53,9 @@ export function handleResume() {
 }
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode(false);
-
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: false, mirror: true, offset: 90 });
+  }, []);
   return (
     <>
       <Box>
@@ -68,7 +72,7 @@ export default function Home() {
             spacing={10}
           >
             <Stack
-              className="slideLeft"
+              data-aos="fade-right"
               w={{ base: "100%", lg: '"50%"' }}
               spacing={4}
               justifyContent="center"
@@ -109,19 +113,13 @@ export default function Home() {
                   }
                 >
                   <Link
-                    // id="resume-link-1"
+                    // id="resume-link-2"
                     href="Parbhat_Resume.pdf"
+                    id="resume-button-2"
                     download
-                    // onClick={handleResume}
                     target="_blank"
                   >
-                    <Button
-                      onClick={handleResume}
-                      className="nav-link resume"
-                      id="resume-button-1"
-                      colorScheme="teal"
-                      size="md"
-                    >
+                    <Button onClick={handleResume} colorScheme="teal" size="md">
                       Resume
                       <Text mr={"4px"} ml="10px">
                         <BiDownload />
@@ -220,7 +218,7 @@ export default function Home() {
               </Stack>
             </Stack>
             <Flex
-              className="slideRight"
+              data-aos="fade-left"
               w={{ base: "100%", lg: '"50%"' }}
               justifyContent={{ base: "center", lg: "end" }}
               alignItems={"center"}

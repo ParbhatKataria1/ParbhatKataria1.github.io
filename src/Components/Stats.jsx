@@ -1,14 +1,20 @@
 import { Box, Flex, Heading, Image, Link, Stack } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import GitHubCalendar from "react-github-calendar";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Stats = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000, once: false, mirror: false, offset: 90 });
+  }, []);
   return (
     <Box marginTop={"130px"} textAlign="center">
-      <Heading className="slideTop">GitHub Stats</Heading>
+      <Heading data-aos="fade-up">GitHub Stats</Heading>
       <Stack m="auto">
         <Box
-          className="react-activity-calendar slideTop"
+          data-aos="fade-up"
+          className="react-activity-calendar"
           m={"auto"}
           mt="50px"
           mb={"40px"}
@@ -32,7 +38,7 @@ const Stats = () => {
               href="https://github.com/ParbhatKataria1"
               target="_blank"
             >
-              <Flex className="slideLeft" justifyContent={"center"}>
+              <Flex data-aos="fade-up" justifyContent={"center"}>
                 <Image
                   id="github-streak-stats"
                   src={
@@ -49,7 +55,7 @@ const Stats = () => {
               href="https://github.com/ParbhatKataria1"
               target="_blank"
             >
-              <Flex className="slideTop" justifyContent={"center"}>
+              <Flex data-aos="fade-up" justifyContent={"center"}>
                 <Image
                   id="github-top-langs"
                   src="https://github-readme-stats.vercel.app/api/top-langs/?username=ParbhatKataria1&layout=compact&theme=radical"
@@ -64,7 +70,7 @@ const Stats = () => {
               href="https://github.com/ParbhatKataria1"
               target="_blank"
             >
-              <Flex className="slideRight" justifyContent={"center"}>
+              <Flex data-aos="fade-up" justifyContent={"center"}>
                 <Image
                   id="github-stats-card"
                   src="https://github-readme-stats.vercel.app/api?username=ParbhatKataria1&count_private=true&show_icons=true&theme=radical"

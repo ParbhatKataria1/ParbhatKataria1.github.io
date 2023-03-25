@@ -23,6 +23,8 @@ import { MoonIcon, SunIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { BiDownload } from "react-icons/bi";
 import DrawerExample from "./SideBar";
 import { handleResume } from "./Home";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const NavLink = ({ children }) => (
   <Link
@@ -40,6 +42,10 @@ const NavLink = ({ children }) => (
 );
 
 export default function Navbar() {
+  useEffect(() => {
+    Aos.init({ duration: 2000, once: false, mirror: true, offset: 90 });
+  }, []);
+
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   useEffect(() => {
@@ -59,7 +65,6 @@ export default function Navbar() {
   return (
     <>
       <Box
-        className="slideDown"
         as="header"
         bg={useColorModeValue("gray.100", "gray.900")}
         px={4}

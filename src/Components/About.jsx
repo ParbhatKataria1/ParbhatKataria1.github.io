@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import {
   Box,
   Heading,
@@ -49,6 +51,9 @@ export const BlogAuthor = (props) => {
 };
 
 const About = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: false, mirror: true, offset: 90 });
+  }, []);
   return (
     <>
       <Box h="60px"></Box>
@@ -59,11 +64,11 @@ const About = () => {
         p={{ base: "2", sm: "12" }}
         textAlign="center"
       >
-        <Heading className="slideTop" mb={"10"} as="h1">
+        <Heading data-aos="fade-right" mb={"10"} as="h1">
           About Me
         </Heading>
         <Flex
-          className="slideTop"
+          data-aos="fade-left"
           w={"90%"}
           m="auto"
           direction={{ base: "column", lg: "row" }}
