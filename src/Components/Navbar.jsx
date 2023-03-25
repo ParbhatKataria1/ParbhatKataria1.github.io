@@ -19,6 +19,8 @@ import {
   Text,
 } from "@chakra-ui/react";
 
+import Parbhat from "./Parbhat_Resume.pdf";
+
 import { MoonIcon, SunIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { BiDownload } from "react-icons/bi";
 import DrawerExample from "./SideBar";
