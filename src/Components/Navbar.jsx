@@ -19,8 +19,6 @@ import {
   Text,
 } from "@chakra-ui/react";
 
-import Parbhat from "./Parbhat_Resume.pdf";
-
 import { MoonIcon, SunIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { BiDownload } from "react-icons/bi";
 import DrawerExample from "./SideBar";
@@ -150,25 +148,26 @@ export default function Navbar() {
                 <Link className="nav-link contact">Contact</Link>
               </Button>
 
-              <Button
-                // id="resume-link-2"
-                id="resume-button-2"
-                colorScheme="teal"
-                onClick={handleResume}
+              <Link
+                // id="resume-link-1"
+                href="Parbhat_Resume.pdf"
+                download
+                // onClick={handleResume}
+                target="_blank"
               >
-                <a
-                  id="resume-link-2"
-                  href="Parbhat"
+                <Button
+                  onClick={handleResume}
+                  className="nav-link resume"
+                  id="resume-button-1"
+                  colorScheme="teal"
                   size="md"
-                  download="Parbhat"
-                  target="_blank"
                 >
                   Resume
                   <Text mr={"4px"} ml="10px">
                     <BiDownload />
                   </Text>
-                </a>
-              </Button>
+                </Button>
+              </Link>
               <Button onClick={toggleColorMode}>
                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
               </Button>
