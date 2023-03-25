@@ -75,12 +75,7 @@ export default function Navbar() {
           m="auto"
           width={"94%"}
         >
-          <Box
-            fontStyle={"Raleway"}
-            w={{ base: "50%", sm: "20%" }}
-            fontSize={"33px"}
-            className="fontClass"
-          >
+          <Box w={{ base: "50%", sm: "20%" }} fontSize={"22px"}>
             Parbhat
           </Box>
 

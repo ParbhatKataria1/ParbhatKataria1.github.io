@@ -1,6 +1,5 @@
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Parbhat from "./Parbhat_Resume.pdf";
 
 import {
   Container,
@@ -25,7 +24,7 @@ import {
   IoLogoBitcoin,
   IoSearchSharp,
 } from "react-icons/io5";
-import { ReactElement, useEffect, useRef, useState } from "react";
+import { ReactElement, useEffect } from "react";
 import { BiDownload } from "react-icons/bi";
 
 const Feature = ({ text, icon, iconBg }) => {
@@ -119,7 +118,7 @@ export default function Home() {
                     <Button
                       onClick={handleResume}
                       className="nav-link resume"
-                      id="resume-button-2"
+                      id="resume-button-1"
                       colorScheme="teal"
                       size="md"
                     >
