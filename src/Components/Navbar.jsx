@@ -59,6 +59,7 @@ export default function Navbar() {
   return (
     <>
       <Box
+        className="slideDown"
         as="header"
         bg={useColorModeValue("gray.100", "gray.900")}
         px={4}
@@ -141,26 +142,27 @@ export default function Navbar() {
               >
                 <Link className="nav-link contact">Contact</Link>
               </Button>
-              <Button
-                onClick={handleResume}
-                className="nav-link resume"
-                id="resume-button-1"
-                colorScheme="teal"
-                size="md"
+
+              <Link
+                // id="resume-link-1"
+                href="Parbhat_Resume.pdf"
+                download
+                // onClick={handleResume}
+                target="_blank"
               >
-                <Link
-                  // id="resume-link-1"
-                  href="Parbhat_Resume.pdf"
-                  download
-                  // onClick={handleResume}
-                  target="_blank"
+                <Button
+                  onClick={handleResume}
+                  className="nav-link resume"
+                  id="resume-button-1"
+                  colorScheme="teal"
+                  size="md"
                 >
                   Resume
                   <Text mr={"4px"} ml="10px">
                     <BiDownload />
                   </Text>
-                </Link>
-              </Button>
+                </Button>
+              </Link>
               <Button onClick={toggleColorMode}>
                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
               </Button>

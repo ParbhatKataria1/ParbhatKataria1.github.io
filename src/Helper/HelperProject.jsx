@@ -16,7 +16,7 @@ import { BsGithub } from "react-icons/bs";
 function HelperProject({ image, title, techStack, desc, github, deploy }) {
   return (
     <Box
-      className="project-card"
+      className="project-card slideTop"
       maxW="sm"
       m="auto"
       w="100%"

@@ -59,11 +59,12 @@ const About = () => {
         p={{ base: "2", sm: "12" }}
         textAlign="center"
       >
-        <Heading mb={"10"} as="h1">
+        <Heading className="slideTop" mb={"10"} as="h1">
           About Me
         </Heading>
         <Flex
-          w={"100%"}
+          className="slideTop"
+          w={"90%"}
           m="auto"
           direction={{ base: "column", lg: "row" }}
           bg={useColorModeValue("white", "gray.800")}
@@ -76,20 +77,17 @@ const About = () => {
         >
           <Box marginRight="3">
             <Flex
-              // border={"5px solid red"}
               width={{ base: "60%", md: "40%", lg: "85%" }}
               justifyContent={"center"}
               textAlign={"center"}
               m="auto"
               zIndex="2"
-              border="4px solid whiteAlpha"
-              borderRadius="20%"
             >
               <Image
                 textAlign={"center"}
                 class="home-img"
-                borderRadius="20%"
-                src={"PP.jpg"}
+                borderRadius="50%"
+                src={"PP.png"}
                 // h="350px"
                 // w="350px"
                 alt="some good alt text"

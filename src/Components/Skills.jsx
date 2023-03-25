@@ -10,18 +10,21 @@ import {
 
 export default function Skills() {
   return (
-    <Center m="auto" pt={100} w="90%" id="skills" flexDirection="column">
-      <Heading>Tech Stack And Developer Tools</Heading>
+    <Center m="auto" pt={100} w="95%" id="skills" flexDirection="column">
+      <Heading className="slideTop">Tech Stack And Developer Tools</Heading>
       <Flex
         justifyContent={"space-around"}
         direction={{ base: "column", lg: "row" }}
         marginTop={"85px"}
       >
         <Box
-          w={{ base: "100%", lg: "48%" }}
+          mr="20px"
+          className="slideLeft"
+          w={{ base: "100%", lg: "50%" }}
           borderRadius={"12px"}
           p="12px"
-          boxShadow={"rgba(255, 255, 255, 0.35) 10px 5px 15px;"}
+          textAlign={"center"}
+          boxShadow={"rgba(255, 255, 255, 0.35) 3px 5px 15px;"}
         >
           {/* here */}
           <Text fontSize={"23px"}>Teach Stack</Text>
@@ -35,7 +38,7 @@ export default function Skills() {
             }}
           >
             <Flex
-              className="skills-card"
+              className="skills-card box"
               transition="0.3s ease-in-out"
               _hover={{
                 transform: "scale(1.05)",
@@ -57,7 +60,7 @@ export default function Skills() {
               <Text className="skills-card-name">HTML</Text>
             </Flex>
             <Flex
-              className="skills-card"
+              className="skills-card box"
               transition="0.3s ease-in-out"
               _hover={{
                 transform: "scale(1.05)",
@@ -79,7 +82,7 @@ export default function Skills() {
               <Text className="skills-card-name">CSS</Text>
             </Flex>
             <Flex
-              className="skills-card"
+              className="skills-card box"
               transition="0.3s ease-in-out"
               _hover={{
                 transform: "scale(1.05)",
@@ -101,7 +104,7 @@ export default function Skills() {
               <Text className="skills-card-name">JavaScript</Text>
             </Flex>
             <Flex
-              className="skills-card"
+              className="skills-card box"
               transition="0.3s ease-in-out"
               _hover={{
                 transform: "scale(1.05)",
@@ -123,7 +126,7 @@ export default function Skills() {
               <Text className="skills-card-name">React</Text>
             </Flex>
             <Flex
-              className="skills-card"
+              className="skills-card box"
               transition="0.3s ease-in-out"
               _hover={{
                 transform: "scale(1.05)",
@@ -145,7 +148,7 @@ export default function Skills() {
               <Text className="skills-card-name">Redux</Text>
             </Flex>
             <Flex
-              className="skills-card"
+              className="skills-card box"
               transition="0.3s ease-in-out"
               _hover={{
                 transform: "scale(1.05)",
@@ -169,7 +172,7 @@ export default function Skills() {
             </Flex>
 
             <Flex
-              className="skills-card"
+              className="skills-card box"
               transition="0.3s ease-in-out"
               _hover={{
                 transform: "scale(1.05)",
@@ -197,7 +200,7 @@ export default function Skills() {
             </Flex>
 
             <Flex
-              className="skills-card"
+              className="skills-card box"
               transition="0.3s ease-in-out"
               _hover={{
                 transform: "scale(1.05)",
@@ -226,9 +229,11 @@ export default function Skills() {
           </Grid>
         </Box>
         <Box
-          w={{ base: "100%", lg: "48%" }}
+          className="slideRight"
+          w={{ base: "100%", lg: "50%" }}
           mt={{ base: "20px", lg: "0px" }}
           borderRadius={"12px"}
+          textAlign="center"
           p="12px"
           boxShadow={"rgba(255, 255, 255, 0.35) 10px 5px 15px;"}
         >
@@ -244,7 +249,7 @@ export default function Skills() {
             }}
           >
             <Flex
-              className="skills-card"
+              className="skills-card box"
               transition="0.3s ease-in-out"
               _hover={{
                 transform: "scale(1.05)",
@@ -271,7 +276,7 @@ export default function Skills() {
               <Text className="skills-card-name">CodePen</Text>
             </Flex>
             <Flex
-              className="skills-card"
+              className="skills-card box"
               transition="0.3s ease-in-out"
               _hover={{
                 transform: "scale(1.05)",
@@ -299,7 +304,7 @@ export default function Skills() {
               <Text className="skills-card-name">Git</Text>
             </Flex>
             <Flex
-              className="skills-card"
+              className="skills-card box"
               transition="0.3s ease-in-out"
               _hover={{
                 transform: "scale(1.05)",
@@ -326,7 +331,7 @@ export default function Skills() {
               <Text className="skills-card-name">Figma</Text>
             </Flex>
             <Flex
-              className="skills-card"
+              className="skills-card box"
               transition="0.3s ease-in-out"
               _hover={{
                 transform: "scale(1.05)",
@@ -352,7 +357,7 @@ export default function Skills() {
               <Text className="skills-card-name">VS Code</Text>
             </Flex>
             <Flex
-              className="skills-card"
+              className="skills-card box"
               transition="0.3s ease-in-out"
               _hover={{
                 transform: "scale(1.05)",
@@ -374,7 +379,7 @@ export default function Skills() {
               <Text className="skills-card-name">Redux</Text>
             </Flex>
             <Flex
-              className="skills-card"
+              className="skills-card box"
               transition="0.3s ease-in-out"
               _hover={{
                 transform: "scale(1.05)",
@@ -398,7 +403,7 @@ export default function Skills() {
             </Flex>
 
             <Flex
-              className="skills-card"
+              className="skills-card box"
               transition="0.3s ease-in-out"
               _hover={{
                 transform: "scale(1.05)",

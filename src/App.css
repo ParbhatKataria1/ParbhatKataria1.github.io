@@ -28,11 +28,75 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.box{
+  animation: box 1s ease-in-out 0s 1 forwards;
+}
+
+@keyframes box {
+  0% {
+    transform: scale(0);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.slideDown{
+  animation: slideDown 1s ease-in-out 0s 1 forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform:translateY(0vh);
+  }
+}
+
+.slideLeft:in-viewport{
+  animation: slideLeft 1s ease-in-out 0s 1 forwards;
+}
+
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform:translateX(0);
+  }
+}
+
+
+.slideRight{
+  animation: slideRight 1s ease-in-out 0s 1 forwards;
+}
+
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform:translateX(0);
+  }
+}
+
+.slideTop{
+  animation: slideTop 1s ease-in-out 0s 1 forwards;
+}
+
+@keyframes slideTop {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform:translateX(0);
   }
 }

@@ -90,12 +90,13 @@ export default function Contact() {
       mt="100px"
     >
       <Container maxW={"7xl"} py={16} as={Stack} spacing={12}>
-        <Stack spacing={0} align={"center"}>
+        <Stack className="slideTop" spacing={0} align={"center"}>
           <Heading>Contact Me</Heading>
           <Text>We have been working with clients around the world</Text>
         </Stack>
         <Flex>
           <Stack
+            className="slideLeft"
             w={"50%"}
             display={{ base: "none", md: "block" }}
             mr="20px"
