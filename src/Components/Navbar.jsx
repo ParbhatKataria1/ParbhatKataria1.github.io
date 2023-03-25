@@ -75,7 +75,12 @@ export default function Navbar() {
           m="auto"
           width={"94%"}
         >
-          <Box w={{ base: "50%", sm: "20%" }} fontSize={"22px"}>
+          <Box
+            fontStyle={"Raleway"}
+            w={{ base: "50%", sm: "20%" }}
+            fontSize={"33px"}
+            className="fontClass"
+          >
             Parbhat
           </Box>
 
@@ -143,26 +148,25 @@ export default function Navbar() {
                 <Link className="nav-link contact">Contact</Link>
               </Button>
 
-              <Link
-                // id="resume-link-1"
-                href="Parbhat_Resume.pdf"
-                download
-                // onClick={handleResume}
-                target="_blank"
+              <Button
+                // id="resume-link-2"
+                id="resume-button-2"
+                colorScheme="teal"
+                onClick={handleResume}
               >
-                <Button
-                  onClick={handleResume}
-                  className="nav-link resume"
-                  id="resume-button-1"
-                  colorScheme="teal"
+                <a
+                  id="resume-link-2"
+                  href="Parbhat"
                   size="md"
+                  download="Parbhat"
+                  target="_blank"
                 >
                   Resume
                   <Text mr={"4px"} ml="10px">
                     <BiDownload />
                   </Text>
-                </Button>
-              </Link>
+                </a>
+              </Button>
               <Button onClick={toggleColorMode}>
                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
               </Button>

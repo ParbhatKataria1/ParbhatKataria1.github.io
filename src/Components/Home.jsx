@@ -1,5 +1,6 @@
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Parbhat from "./Parbhat_Resume.pdf";
 
 import {
   Container,
@@ -24,7 +25,7 @@ import {
   IoLogoBitcoin,
   IoSearchSharp,
 } from "react-icons/io5";
-import { ReactElement, useEffect } from "react";
+import { ReactElement, useEffect, useRef, useState } from "react";
 import { BiDownload } from "react-icons/bi";
 
 const Feature = ({ text, icon, iconBg }) => {
@@ -116,11 +117,10 @@ export default function Home() {
                   >
                     <a
                       id="resume-link-2"
-                      href="Parbhat_Resume.pdf"
+                      href="Parbhat"
                       size="md"
-                      download="Parbhat_Resume.pdf"
+                      download="Parbhat"
                       target="_blank"
-                      rel="noreferrer"
                     >
                       Resume
                       <Text mr={"4px"} ml="10px">
