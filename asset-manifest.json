@@ -1,17 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.5751c91c.css",
-    "main.js": "/static/js/main.1f0de93e.js",
+    "main.js": "/static/js/main.bde289d5.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
-    "static/media/Parbhat_Resume.pdf": "/static/media/Parbhat_Resume.4001952aca53f214afb2.pdf",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
     "main.5751c91c.css.map": "/static/css/main.5751c91c.css.map",
-    "main.1f0de93e.js.map": "/static/js/main.1f0de93e.js.map",
+    "main.bde289d5.js.map": "/static/js/main.bde289d5.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5751c91c.css",
-    "static/js/main.1f0de93e.js"
+    "static/js/main.bde289d5.js"
   ]
 }
