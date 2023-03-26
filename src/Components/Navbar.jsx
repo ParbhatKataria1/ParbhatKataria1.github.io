@@ -80,7 +80,11 @@ export default function Navbar() {
           m="auto"
           width={"94%"}
         >
-          <Box w={{ base: "50%", sm: "20%" }} fontSize={"22px"}>
+          <Box
+            className="fontClass"
+            w={{ base: "50%", sm: "20%" }}
+            fontSize={"32px"}
+          >
             Parbhat
           </Box>
 

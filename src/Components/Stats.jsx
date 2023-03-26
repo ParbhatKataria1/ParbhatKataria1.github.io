@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 
 const Stats = () => {
   useEffect(() => {
-    Aos.init({ duration: 2000, once: false, mirror: false, offset: 90 });
+    Aos.init({ duration: 2000, once: true, mirror: false, offset: 90 });
   }, []);
   return (
     <Box marginTop={"130px"} textAlign="center">

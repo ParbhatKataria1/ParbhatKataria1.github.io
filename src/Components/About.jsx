@@ -52,7 +52,7 @@ export const BlogAuthor = (props) => {
 
 const About = () => {
   useEffect(() => {
-    Aos.init({ duration: 1000, once: false, mirror: true, offset: 90 });
+    Aos.init({ duration: 1000, once: true, mirror: false, offset: 120 });
   }, []);
   return (
     <>
@@ -64,11 +64,11 @@ const About = () => {
         p={{ base: "2", sm: "12" }}
         textAlign="center"
       >
-        <Heading data-aos="fade-right" mb={"10"} as="h1">
+        <Heading data-aos="fade-up" mb={"10"} as="h1">
           About Me
         </Heading>
         <Flex
-          data-aos="fade-left"
+          data-aos="fade-up"
           w={"90%"}
           m="auto"
           direction={{ base: "column", lg: "row" }}
@@ -77,7 +77,9 @@ const About = () => {
           p="20px"
           textAlign={"left"}
           boxShadow={"rgba(230, 250, 255, 0.56) 0px 22px 70px 4px;"}
-          marginTop={{ base: "5", sm: "5" }}
+          // marginTop={{ base: "5", sm: "5" }}
+          mt="60px"
+          border={"1px solid red"}
           justifyContent={{ base: "center", lg: "space-between" }}
         >
           <Box marginRight="3">
@@ -85,6 +87,7 @@ const About = () => {
               width={{ base: "60%", md: "40%", lg: "85%" }}
               justifyContent={"center"}
               textAlign={"center"}
+              borderRadius="50%"
               m="auto"
               zIndex="2"
             >
@@ -93,8 +96,7 @@ const About = () => {
                 class="home-img"
                 borderRadius="50%"
                 src={"PP.png"}
-                // h="350px"
-                // w="350px"
+                border="1px solid lightgray"
                 alt="some good alt text"
                 objectFit="cover"
               />

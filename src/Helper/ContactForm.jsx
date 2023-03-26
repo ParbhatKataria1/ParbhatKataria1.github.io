@@ -109,7 +109,7 @@ export default function ContactForm() {
         <Form1 />
         <ButtonGroup mt="5%" w="100%">
           <Flex w="100%" justifyContent="space-between">
-            <Button
+            {/* <Button
               w="7rem"
               isDisabled={step === 3}
               onClick={() => {
@@ -124,7 +124,7 @@ export default function ContactForm() {
               variant="outline"
             >
               Next
-            </Button>
+            </Button> */}
           </Flex>
         </ButtonGroup>
       </Box>

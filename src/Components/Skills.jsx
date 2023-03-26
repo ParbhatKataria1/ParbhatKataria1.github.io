@@ -13,11 +13,13 @@ import { useEffect } from "react";
 
 export default function Skills() {
   useEffect(() => {
-    Aos.init({ duration: 1000, once: false, mirror: true, offset: 90 });
+    Aos.init({ duration: 1000, once: true, mirror: true, offset: 90 });
   }, []);
   return (
     <Center m="auto" pt={100} w="95%" id="skills" flexDirection="column">
-      <Heading data-aos="fade-up">Tech Stack And Developer Tools</Heading>
+      <Heading textAlign={"center"} data-aos="fade-up">
+        Tech Stack And Developer Tools
+      </Heading>
       <Flex
         justifyContent={"space-around"}
         direction={{ base: "column", lg: "row" }}
@@ -25,7 +27,7 @@ export default function Skills() {
       >
         <Box
           mr="20px"
-          data-aos="fade-right"
+          data-aos="fade-up"
           w={{ base: "100%", lg: "50%" }}
           borderRadius={"12px"}
           p="12px"
@@ -235,7 +237,7 @@ export default function Skills() {
           </Grid>
         </Box>
         <Box
-          data-aos="fade-left"
+          data-aos="fade-up"
           w={{ base: "100%", lg: "50%" }}
           mt={{ base: "20px", lg: "0px" }}
           borderRadius={"12px"}

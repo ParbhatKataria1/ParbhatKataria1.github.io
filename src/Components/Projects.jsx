@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 
 const Projects = () => {
   useEffect(() => {
-    Aos.init({ duration: 1000, once: false, mirror: true, offset: 90 });
+    Aos.init({ duration: 1000, once: true, mirror: true, offset: 90 });
   }, []);
   return (
     // Passing `columns={[2, null, 3]}` and `columns={{sm: 2, md: 3}}`

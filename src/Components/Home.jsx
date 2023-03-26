@@ -54,14 +54,14 @@ export function handleResume() {
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode(false);
   useEffect(() => {
-    Aos.init({ duration: 1000, once: false, mirror: true, offset: 90 });
+    Aos.init({ duration: 1000, once: true, mirror: true, offset: 90 });
   }, []);
   return (
     <>
       <Box>
         <Box id="home" h="30px"></Box>
         <Container
-          maxW={{ base: "95%", sm: "80%" }}
+          maxW={{ base: "100%", sm: "80%" }}
           m="auto"
           mt={"40px"}
           mb={{ base: "-50px", sm: "0px" }}
@@ -72,7 +72,7 @@ export default function Home() {
             spacing={10}
           >
             <Stack
-              data-aos="fade-right"
+              data-aos="fade-up"
               w={{ base: "100%", lg: '"50%"' }}
               spacing={4}
               justifyContent="center"
@@ -218,7 +218,7 @@ export default function Home() {
               </Stack>
             </Stack>
             <Flex
-              data-aos="fade-left"
+              data-aos="fade-up"
               w={{ base: "100%", lg: '"50%"' }}
               justifyContent={{ base: "center", lg: "end" }}
               alignItems={"center"}

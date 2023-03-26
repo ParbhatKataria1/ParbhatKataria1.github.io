@@ -24,13 +24,15 @@ function App() {
 
   return (
     <div style={{ marginTop: "0px" }}>
-      <Navbar />
-      <Home />
-      <About />
-      <Skills />
-      <Projects />
-      <Stats />
-      <Contact />
+      <Box>
+        <Navbar />
+        <Home />
+        <About />
+        <Skills />
+        <Projects />
+        <Stats />
+        <Contact />
+      </Box>
     </div>
   );
 }
