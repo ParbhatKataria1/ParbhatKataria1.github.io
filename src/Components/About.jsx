@@ -79,7 +79,6 @@ const About = () => {
           boxShadow={"rgba(230, 250, 255, 0.56) 0px 22px 70px 4px;"}
           // marginTop={{ base: "5", sm: "5" }}
           mt="60px"
-          border={"1px solid red"}
           justifyContent={{ base: "center", lg: "space-between" }}
         >
           <Box marginRight="3">

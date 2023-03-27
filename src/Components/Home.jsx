@@ -113,13 +113,17 @@ export default function Home() {
                   }
                 >
                   <Link
-                    // id="resume-link-2"
+                    id="resume-link-2"
                     href="Parbhat_Resume.pdf"
-                    id="resume-button-2"
-                    download
-                    target="_blank"
+                    download="Parbhat_Resume.pdf"
+                    // target="_blank"
                   >
-                    <Button onClick={handleResume} colorScheme="teal" size="md">
+                    <Button
+                      id="resume-button-2"
+                      onClick={handleResume}
+                      colorScheme="teal"
+                      size="md"
+                    >
                       Resume
                       <Text mr={"4px"} ml="10px">
                         <BiDownload />

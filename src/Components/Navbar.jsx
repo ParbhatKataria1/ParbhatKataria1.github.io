@@ -153,7 +153,7 @@ export default function Navbar() {
               </Button>
 
               <Link
-                // id="resume-link-1"
+                id="resume-link-1"
                 href="Parbhat_Resume.pdf"
                 download
                 // onClick={handleResume}
