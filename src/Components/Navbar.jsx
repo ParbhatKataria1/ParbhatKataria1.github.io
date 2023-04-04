@@ -152,7 +152,7 @@ export default function Navbar() {
                 <Link className="nav-link contact">Contact</Link>
               </Button>
 
-              <Link
+              <a
                 id="resume-link-1"
                 href="Parbhat_Resume.pdf"
                 download
@@ -171,7 +171,7 @@ export default function Navbar() {
                     <BiDownload />
                   </Text>
                 </Button>
-              </Link>
+              </a>
               <Button onClick={toggleColorMode}>
                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
               </Button>
