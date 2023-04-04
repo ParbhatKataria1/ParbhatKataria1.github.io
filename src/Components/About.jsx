@@ -52,7 +52,7 @@ export const BlogAuthor = (props) => {
 
 const About = () => {
   useEffect(() => {
-    Aos.init({ duration: 1000, once: true, mirror: false, offset: 120 });
+    Aos.init({ duration: 1000, once: true, mirror: false, offset: 1000 });
   }, []);
   return (
     <>
@@ -86,18 +86,17 @@ const About = () => {
               width={{ base: "60%", md: "40%", lg: "85%" }}
               justifyContent={"center"}
               textAlign={"center"}
-              borderRadius="50%"
+              borderRadius={"50%"}
               m="auto"
               zIndex="2"
             >
               <Image
                 textAlign={"center"}
                 class="home-img"
-                borderRadius="50%"
                 src={"PP.png"}
-                border="1px solid lightgray"
+                border="1px solid white"
                 alt="some good alt text"
-                objectFit="cover"
+                // objectFit="cover"
               />
             </Flex>
           </Box>

@@ -276,7 +276,7 @@ export default function Contact() {
               </svg>
             </Flex>
           </Flex>
-          <Box data-aos="fade-up">
+          <Box borderRadius={"5px"} data-aos="fade-up">
             <ContactForm />
           </Box>
         </Flex>

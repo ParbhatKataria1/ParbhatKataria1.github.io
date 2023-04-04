@@ -1,6 +1,6 @@
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Aos from "aos";
+import AOS from "aos";
 import "aos/dist/aos.css";
 
 import {
@@ -47,15 +47,16 @@ const Feature = ({ text, icon, iconBg }) => {
   );
 };
 export function handleResume() {
-  window.open(
-    `https://drive.google.com/file/d/1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer/view`
-  );
+  window.location.href = `https://drive.google.com/file/d/1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer/view`;
 }
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode(false);
   useEffect(() => {
-    Aos.init({ duration: 1000, once: true, mirror: true, offset: 90 });
+    AOS.init({ once: true, offset: 500 });
   }, []);
+  useEffect(() => {
+    AOS.refresh();
+  });
   return (
     <>
       <Box>
@@ -112,24 +113,24 @@ export default function Home() {
                     />
                   }
                 >
-                  <Link
-                    id="resume-link-2"
-                    href="Parbhat_Resume.pdf"
-                    download="Parbhat_Resume.pdf"
-                    // target="_blank"
+                  <Button
+                    id="resume-button-2"
+                    onClick={handleResume}
+                    colorScheme="teal"
+                    size="md"
                   >
-                    <Button
-                      id="resume-button-2"
-                      onClick={handleResume}
-                      colorScheme="teal"
-                      size="md"
+                    <Link
+                      id="resume-link-2"
+                      href="https://drive.google.com/file/d/1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer/view"
+                      download="https://drive.google.com/file/d/1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer/view"
+                      target="_blank"
                     >
                       Resume
                       <Text mr={"4px"} ml="10px">
                         <BiDownload />
                       </Text>
-                    </Button>
-                  </Link>
+                    </Link>
+                  </Button>
                   <Flex justifyContent={"space-around"} w="25%">
                     <Link
                       m="5px"
@@ -185,7 +186,7 @@ export default function Home() {
                 <Stack>
                   <Flex>
                     <svg
-                      fill="white"
+                      fill={colorMode === "light" ? "black" : "white"}
                       width="24"
                       height="24"
                       xmlns="http://www.w3.org/2000/svg"
@@ -204,7 +205,7 @@ export default function Home() {
                   >
                     <Flex mt={{ base: "20px", sm: "0px" }}>
                       <svg
-                        fill="white"
+                        fill={colorMode === "light" ? "black" : "white"}
                         width="24"
                         height="24"
                         xmlns="http://www.w3.org/2000/svg"

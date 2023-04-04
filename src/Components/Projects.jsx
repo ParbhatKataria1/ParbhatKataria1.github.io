@@ -34,13 +34,21 @@ const Projects = () => {
 
 let data = [
   {
+    image: "unit6Project.png",
+    desc: "Style Fashion is an e-commerce platform to buy mens and womens clothing products.",
+    title: "Style Fashion",
+    techStack: ["React", "Chakra UI", "0Auth", "Express", "MongoDB"],
+    github: "https://github.com/ParbhatKataria1/assorted-desk-4504",
+    deploy: "https://ephemeral-platypus-7df5f7.netlify.app",
+  },
+  {
     image:
       "https://serving.photos.photobox.com/78056824e1d2dcb063cf8a5ea1341a6907cb7b0db09d946e3a34b0372449333665356f22.jpg",
     title: "Sugar Cosmetics Clone",
     desc: "It is a beauty product-based website which is used to order cosmetic products",
     techStack: ["HTML", "CSS", "JavaScript", "JQuery"],
     github: "https://github.com/ParbhatKataria1/money-zephyr-6413",
-    deploy: "https://gleeful-lebkuchen-052b83.netlify.app/",
+    deploy: "https://gleeful-lebkuchen-052b83.netlify.app",
   },
   {
     image:
@@ -49,7 +57,7 @@ let data = [
     title: "Tripvillas Clone",
     techStack: ["HTML", "CSS", "JavaScript", "JQuery"],
     github: "https://github.com/ParbhatKataria1/longing-fairies-6305",
-    deploy: "https://shiny-klepon-a49c07.netlify.app/",
+    deploy: "https://shiny-klepon-a49c07.netlify.app",
   },
   {
     image: "unit5project.png",
@@ -63,21 +71,7 @@ let data = [
       "JSON - Server",
     ],
     github: "https://github.com/ParbhatKataria1/responsible-act-7116",
-    deploy: "https://unit-5-frontend-deployement.netlify.app/",
-  },
-  {
-    image: "unit5project.png",
-    desc: "Sunglow Fashion is an e-commerce platform to buy clothes and fashion products.",
-    title: "Sunglow Fashion",
-    techStack: [
-      "Next.Js",
-      "Chakra UI",
-      "Google Authentication",
-      "Redux",
-      "JSON - Server",
-    ],
-    github: "https://github.com/ParbhatKataria1/responsible-act-7116",
-    deploy: "https://unit-5-frontend-deployement.netlify.app/",
+    deploy: "https://unit-5-frontend-deployement.netlify.app",
   },
 ];
 
