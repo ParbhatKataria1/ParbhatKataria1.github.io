@@ -123,7 +123,10 @@ export default function Contact() {
                   border={"1px solid gray"}
                   mt="30px"
                 >
-                  <Link href="https://github.com/ParbhatKataria1">
+                  <Link
+                    href="https://github.com/ParbhatKataria1"
+                    target="_blank"
+                  >
                     <Flex m="10px" alignItems={"center"}>
                       <Link
                         m="5px"
@@ -155,7 +158,7 @@ export default function Contact() {
                   border={"1px solid gray"}
                   mt="30px"
                 >
-                  <Link href="https://github.com/ParbhatKataria1">
+                  <Link href="https://www.linkedin.com/in/parbhat004/">
                     <Flex m="10px" alignItems={"center"}>
                       <Link
                         m="5px"
@@ -188,16 +191,13 @@ export default function Contact() {
                   border={"1px solid gray"}
                   mt="30px"
                 >
-                  <Link href="https://github.com/ParbhatKataria1">
+                  <Link href="mailto:parbhatkataria628@gmail.com">
                     <Flex
                       justifyContent={"space-between"}
                       m="10px"
                       alignItems={"center"}
                     >
-                      <Link
-                        href="mailto:parbhatkataria628@gmail.com"
-                        cursor={"pointer"}
-                      >
+                      <Link cursor={"pointer"}>
                         <Flex mt={{ base: "20px", sm: "0px" }}>
                           <svg
                             fill="white"
@@ -232,7 +232,7 @@ export default function Contact() {
                     >
                       <Flex mt={{ base: "20px", sm: "0px" }}>
                         <svg
-                          fill="white"
+                          fill={colorMode === "light" ? "black" : "white"}
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
                           height="24"
@@ -263,7 +263,7 @@ export default function Contact() {
                 <svg
                   width="100px"
                   h="30px"
-                  fill="white"
+                  fill={colorMode === "light" ? "black" : "white"}
                   clip-rule="evenodd"
                   fill-rule="evenodd"
                   stroke-linejoin="round"
@@ -281,7 +281,12 @@ export default function Contact() {
           </Flex>
           <Box borderRadius={"5px"}>
             <Fade right>
-              <ContactForm />
+              <Box
+                bg={colorMode === "light" ? "white" : "none"}
+                borderRadius="9px"
+              >
+                <ContactForm />
+              </Box>
             </Fade>
           </Box>
         </Flex>

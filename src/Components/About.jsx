@@ -16,6 +16,7 @@ import {
   VStack,
   Flex,
   Button,
+  useColorMode,
 } from "@chakra-ui/react";
 
 import Fade from "react-reveal/Fade";
@@ -51,6 +52,7 @@ export const BlogAuthor = (props) => {
 };
 
 const About = () => {
+  const { colorMode, toggleColorMode } = useColorMode(false);
   return (
     <>
       <Box h={{ base: "60px", sm: "90px" }}></Box>
@@ -75,7 +77,11 @@ const About = () => {
             borderRadius="20px"
             p="20px"
             textAlign={"left"}
-            boxShadow={"rgba(230, 250, 255, 0.56) 0px 22px 70px 4px;"}
+            boxShadow={
+              colorMode === "light"
+                ? "rgba(0, 0, 0, 0.35) 0px 5px 15px;"
+                : "rgba(230, 250, 255, 0.56) 0px 22px 70px 4px;"
+            }
             // marginTop={{ base: "5", sm: "5" }}
             mt="60px"
             justifyContent={{ base: "center", lg: "space-between" }}
@@ -120,7 +126,9 @@ const About = () => {
                   padding={"18px"}
                   borderRadius="9px"
                   boxShadow={
-                    "rgba(255, 255, 255, 0.17) 0px -2px 25px 0px inset, rgba(255, 255, 255, 0.15) 0px -36px 30px 0px inset, rgba(255, 255, 255, 0.1) 0px -79px 40px 0px inset, rgba(255, 255, 255, 0.06) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px, rgba(255, 255, 255, 0.09) 0px 8px 4px, rgba(255, 255, 255, 0.09) 0px 16px 8px, rgba(255, 255, 255, 0.09) 0px 2px 16px"
+                    colorMode === "light"
+                      ? "rgba(0, 0, 0, 0.35) 0px 5px 15px;"
+                      : "rgba(230, 250, 255, 0.56) 0px 22px 70px 4px;"
                   }
                 >
                   <Text>1200+ Hours</Text>
@@ -133,7 +141,9 @@ const About = () => {
                   padding={"18px"}
                   borderRadius="9px"
                   boxShadow={
-                    "rgba(255, 255, 255, 0.17) 0px -23px 25px 0px inset, rgba(255, 255, 255, 0.15) 0px -36px 30px 0px inset, rgba(255, 255, 255, 0.1) 0px -79px 40px 0px inset, rgba(255, 255, 255, 0.06) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px, rgba(255, 255, 255, 0.09) 0px 8px 4px, rgba(255, 255, 255, 0.09) 0px 16px 8px, rgba(255, 255, 255, 0.09) 0px 2px 16px"
+                    colorMode === "light"
+                      ? "rgba(0, 0, 0, 0.35) 0px 5px 15px;"
+                      : "rgba(230, 250, 255, 0.56) 0px 22px 70px 4px;"
                   }
                 >
                   <Text>4+ Major Projects</Text>
@@ -146,7 +156,9 @@ const About = () => {
                   padding={"18px"}
                   borderRadius="9px"
                   boxShadow={
-                    "rgba(255, 255, 255, 0.17) 0px -23px 25px 0px inset, rgba(255, 255, 255, 0.15) 0px -36px 30px 0px inset, rgba(255, 255, 255, 0.1) 0px -79px 40px 0px inset, rgba(255, 255, 255, 0.06) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px, rgba(255, 255, 255, 0.09) 0px 8px 4px, rgba(255, 255, 255, 0.09) 0px 16px 8px, rgba(255, 255, 255, 0.09) 0px 2px 16px"
+                    colorMode === "light"
+                      ? "rgba(0, 0, 0, 0.35) 0px 5px 15px;"
+                      : "rgba(230, 250, 255, 0.56) 0px 22px 70px 4px;"
                   }
                 >
                   <Text>100+ Hours</Text>

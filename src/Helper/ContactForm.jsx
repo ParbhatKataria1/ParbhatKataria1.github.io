@@ -28,7 +28,7 @@ const Form1 = () => {
     console.log("this");
   }
   return (
-    <>
+    <Box>
       <form
         action="https://getform.io/f/4f739fae-4e60-4f77-a69d-657650edefc8"
         method="POST"
@@ -86,7 +86,7 @@ const Form1 = () => {
           </Button>
         </FormControl>
       </form>
-    </>
+    </Box>
   );
 };
 

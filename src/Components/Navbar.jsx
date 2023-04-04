@@ -27,7 +27,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import Zoom from "react-reveal/Zoom";
 
-export function handleResume() {
+function handleResume() {
   window.location.href = `https://drive.google.com/uc?export=download&id=1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer`;
 }
 
@@ -70,6 +70,7 @@ export default function Navbar() {
   return (
     <>
       <Box
+        id="nav-menu"
         as="header"
         bg={useColorModeValue("gray.100", "gray.900")}
         px={4}
@@ -100,7 +101,6 @@ export default function Navbar() {
             justifyContent="end"
           >
             <Flex
-              id="nav-menu"
               w="100%"
               justifyContent={"space-between"}
               direction={"row"}
@@ -114,7 +114,21 @@ export default function Navbar() {
                 colorScheme="gray"
                 variant="ghost"
               >
-                <Link className="nav-link home">Home</Link>
+                <Link className="nav-link home">
+                  <Flex alignItems={"center"}>
+                    <svg
+                      fill={colorMode === "light" ? "black" : "white"}
+                      width="19"
+                      height="19"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                    >
+                      <path d="M6 23h-3v-10l8.991-8.005 9.009 8.005v10h-3v-9h-12v9zm1-2h10v2h-10v-2zm0-3h10v2h-10v-2zm10-3v2h-10v-2h10zm-5-14.029l12 10.661-1.328 1.493-10.672-9.481-10.672 9.481-1.328-1.493 12-10.661z" />
+                    </svg>
+                    <Text ml="10px">Home</Text>
+                  </Flex>
+                </Link>
               </Button>
 
               <Button
