@@ -47,7 +47,7 @@ const Feature = ({ text, icon, iconBg }) => {
   );
 };
 export function handleResume() {
-  window.location.href = `https://drive.google.com/file/d/1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer/view`;
+  window.location.href = `https://drive.google.com/uc?export=download&id=1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer`;
 }
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode(false);
@@ -122,7 +122,6 @@ export default function Home() {
                     <a
                       id="resume-link-2"
                       href="https://drive.google.com/file/d/1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer/view"
-                      download="https://drive.google.com/file/d/1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer/view"
                       target="_blank"
                     >
                       Resume
