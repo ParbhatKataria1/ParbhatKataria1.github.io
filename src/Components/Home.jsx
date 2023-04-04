@@ -115,7 +115,7 @@ export default function Home() {
                       colorScheme="teal"
                       size="md"
                     >
-                      <Link
+                      <a
                         id="resume-link-2"
                         href="https://drive.google.com/file/d/1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer/view"
                         target="_blank"
@@ -123,7 +123,7 @@ export default function Home() {
                         <Flex alignItems={"center"} mr={"4px"} ml="10px">
                           <Text mr="8px">Resume</Text> <BiDownload />
                         </Flex>
-                      </Link>
+                      </a>
                     </Button>
                     <Flex justifyContent={"space-around"} w="25%">
                       <Link
