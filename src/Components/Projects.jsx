@@ -1,20 +1,18 @@
 import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import HelperProject from "../Helper/HelperProject";
-import Aos from "aos";
-import "aos/dist/aos.css";
+import Fade from "react-reveal/Fade";
 
 const Projects = () => {
-  useEffect(() => {
-    Aos.init({ duration: 1000, once: true, mirror: true, offset: 90 });
-  }, []);
   return (
     // Passing `columns={[2, null, 3]}` and `columns={{sm: 2, md: 3}}`
     // will have the same effect.
     <Box id="projects" textAlign={"center"} pt="130px" mt={"10"}>
-      <Heading data-aos="fade-up">Projects</Heading>
+      <Heading>
+        {" "}
+        <Fade bottom> Projects </Fade>
+      </Heading>
       <SimpleGrid
-        data-aos="fade-up"
         justifyContent="center"
         textAlign={"center"}
         m={"auto"}

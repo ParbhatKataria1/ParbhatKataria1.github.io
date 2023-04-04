@@ -1,26 +1,27 @@
 import { Box, Flex, Heading, Image, Link, Stack } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import GitHubCalendar from "react-github-calendar";
-import Aos from "aos";
-import "aos/dist/aos.css";
+import Fade from "react-reveal/Fade";
 
 const Stats = () => {
-  useEffect(() => {
-    Aos.init({ duration: 2000, once: true, mirror: false, offset: 90 });
-  }, []);
   return (
     <Box marginTop={"130px"} textAlign="center">
-      <Heading data-aos="fade-up">GitHub Stats</Heading>
+      <Heading>
+        {" "}
+        <Fade bottom> GitHub Stats </Fade>{" "}
+      </Heading>
       <Stack m="auto">
         <Box
-          data-aos="fade-up"
           className="react-activity-calendar"
           m={"auto"}
           mt="50px"
           mb={"40px"}
         >
           <Link href="https://github.com/ParbhatKataria1" target="_blank">
-            <GitHubCalendar username="ParbhatKataria1" />
+            <Fade bottom>
+              {" "}
+              <GitHubCalendar username="ParbhatKataria1" />
+            </Fade>
           </Link>
         </Box>
         <Flex w="100%" justifyContent={"center"}>
@@ -38,13 +39,15 @@ const Stats = () => {
               href="https://github.com/ParbhatKataria1"
               target="_blank"
             >
-              <Flex data-aos="fade-up" justifyContent={"center"}>
-                <Image
-                  id="github-streak-stats"
-                  src={
-                    "https://github-readme-streak-stats.herokuapp.com/?user=ParbhatKataria1&theme=radical"
-                  }
-                ></Image>
+              <Flex justifyContent={"center"}>
+                <Fade bottom>
+                  <Image
+                    id="github-streak-stats"
+                    src={
+                      "https://github-readme-streak-stats.herokuapp.com/?user=ParbhatKataria1&theme=radical"
+                    }
+                  ></Image>
+                </Fade>
               </Flex>
             </Link>
 
@@ -55,11 +58,13 @@ const Stats = () => {
               href="https://github.com/ParbhatKataria1"
               target="_blank"
             >
-              <Flex data-aos="fade-up" justifyContent={"center"}>
-                <Image
-                  id="github-top-langs"
-                  src="https://github-readme-stats.vercel.app/api/top-langs/?username=ParbhatKataria1&layout=compact&theme=radical"
-                ></Image>
+              <Flex justifyContent={"center"}>
+                <Fade bottom>
+                  <Image
+                    id="github-top-langs"
+                    src="https://github-readme-stats.vercel.app/api/top-langs/?username=ParbhatKataria1&layout=compact&theme=radical"
+                  ></Image>
+                </Fade>
               </Flex>
             </Link>
 
@@ -70,11 +75,13 @@ const Stats = () => {
               href="https://github.com/ParbhatKataria1"
               target="_blank"
             >
-              <Flex data-aos="fade-up" justifyContent={"center"}>
-                <Image
-                  id="github-stats-card"
-                  src="https://github-readme-stats.vercel.app/api?username=ParbhatKataria1&count_private=true&show_icons=true&theme=radical"
-                ></Image>
+              <Flex justifyContent={"center"}>
+                <Fade bottom>
+                  <Image
+                    id="github-stats-card"
+                    src="https://github-readme-stats.vercel.app/api?username=ParbhatKataria1&count_private=true&show_icons=true&theme=radical"
+                  ></Image>
+                </Fade>
               </Flex>
             </Link>
           </Flex>

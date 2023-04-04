@@ -25,6 +25,7 @@ import DrawerExample from "./SideBar";
 // import { handleResume } from "./Home";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Zoom from "react-reveal/Zoom";
 
 export function handleResume() {
   window.location.href = `https://drive.google.com/uc?export=download&id=1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer`;
@@ -163,16 +164,15 @@ export default function Navbar() {
                 colorScheme="teal"
                 size="md"
               >
-                <a
+                <Link
                   id="resume-link-1"
                   href="https://drive.google.com/file/d/1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer/view"
                   target="_blank"
                 >
-                  Resume
-                  <Text mr={"4px"} ml="10px">
-                    <BiDownload />
-                  </Text>
-                </a>
+                  <Flex alignItems={"center"} mr={"4px"} ml="10px">
+                    <Text mr="8px">Resume</Text> <BiDownload />
+                  </Flex>
+                </Link>
               </Button>
 
               <Button onClick={toggleColorMode}>
