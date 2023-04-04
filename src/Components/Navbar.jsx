@@ -22,9 +22,13 @@ import {
 import { MoonIcon, SunIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { BiDownload } from "react-icons/bi";
 import DrawerExample from "./SideBar";
-import { handleResume } from "./Home";
+// import { handleResume } from "./Home";
 import Aos from "aos";
 import "aos/dist/aos.css";
+
+export function handleResume() {
+  window.location.href = `https://drive.google.com/uc?export=download&id=1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer`;
+}
 
 const NavLink = ({ children }) => (
   <Link
@@ -152,26 +156,25 @@ export default function Navbar() {
                 <Link className="nav-link contact">Contact</Link>
               </Button>
 
-              <a
-                id="resume-link-1"
-                href="Parbhat_Resume.pdf"
-                download
-                // onClick={handleResume}
-                target="_blank"
+              <Button
+                className="nav-link resume"
+                onClick={handleResume}
+                id="resume-button-1"
+                colorScheme="teal"
+                size="md"
               >
-                <Button
-                  onClick={handleResume}
-                  className="nav-link resume"
-                  id="resume-button-1"
-                  colorScheme="teal"
-                  size="md"
+                <a
+                  id="resume-link-1"
+                  href="https://drive.google.com/file/d/1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer/view"
+                  target="_blank"
                 >
                   Resume
                   <Text mr={"4px"} ml="10px">
                     <BiDownload />
                   </Text>
-                </Button>
-              </a>
+                </a>
+              </Button>
+
               <Button onClick={toggleColorMode}>
                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
               </Button>
