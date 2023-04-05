@@ -36,55 +36,58 @@ const Form1 = () => {
         <Heading w="100%" textAlign={"center"} fontWeight="normal" mb="2%">
           Get In Touch With Me
         </Heading>
-        <Flex>
-          <FormControl mr="5%">
-            <FormLabel htmlFor="first-name" fontWeight={"normal"}>
-              First name
+        <Box
+        >
+          <Flex>
+            <FormControl mr="5%">
+              <FormLabel htmlFor="first-name" fontWeight={"normal"}>
+                First name
+              </FormLabel>
+              <Input
+                id="first-name"
+                placeholder="First name"
+                name="first-name"
+                type="text"
+              />
+            </FormControl>
+
+            <FormControl>
+              <FormLabel htmlFor="last-name" fontWeight={"normal"}>
+                Last name
+              </FormLabel>
+              <Input
+                id="last-name"
+                placeholder="First name"
+                name="last-name"
+                type="text"
+              />
+            </FormControl>
+          </Flex>
+          <FormControl mt="2%">
+            <FormLabel htmlFor="email" fontWeight={"normal"}>
+              Email address
             </FormLabel>
-            <Input
-              id="first-name"
-              placeholder="First name"
-              name="first-name"
-              type="text"
-            />
+            <Input id="email" type="email" name="email" />
+            <FormHelperText>We'll never share your email.</FormHelperText>
           </FormControl>
 
           <FormControl>
-            <FormLabel htmlFor="last-name" fontWeight={"normal"}>
-              Last name
+            <FormLabel htmlFor="textarea" fontWeight={"normal"} mt="2%">
+              Write your Message
             </FormLabel>
-            <Input
-              id="last-name"
-              placeholder="First name"
-              name="last-name"
-              type="text"
-            />
+            <InputGroup size="md">
+              <Textarea
+                pr="4.5rem"
+                type={"textarea"}
+                name="message"
+                placeholder="Enter Your Message"
+              />
+            </InputGroup>
+            <Button type="submit" mt="20px">
+              Next
+            </Button>
           </FormControl>
-        </Flex>
-        <FormControl mt="2%">
-          <FormLabel htmlFor="email" fontWeight={"normal"}>
-            Email address
-          </FormLabel>
-          <Input id="email" type="email" name="email" />
-          <FormHelperText>We'll never share your email.</FormHelperText>
-        </FormControl>
-
-        <FormControl>
-          <FormLabel htmlFor="textarea" fontWeight={"normal"} mt="2%">
-            Write your Message
-          </FormLabel>
-          <InputGroup size="md">
-            <Textarea
-              pr="4.5rem"
-              type={"textarea"}
-              name="message"
-              placeholder="Enter Your Message"
-            />
-          </InputGroup>
-          <Button type="submit" mt="20px">
-            Next
-          </Button>
-        </FormControl>
+        </Box>
       </form>
     </Box>
   );

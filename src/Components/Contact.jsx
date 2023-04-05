@@ -119,7 +119,7 @@ export default function Contact() {
                 <Button
                   borderRadius={"5px"}
                   p="10px"
-                  w="35%"
+                  w="220px"
                   border={"1px solid gray"}
                   mt="30px"
                 >
@@ -154,7 +154,7 @@ export default function Contact() {
                 <Button
                   borderRadius={"5px"}
                   p="10px"
-                  w="35%"
+                  w="220px"
                   border={"1px solid gray"}
                   mt="30px"
                 >
@@ -187,7 +187,7 @@ export default function Contact() {
                 <Button
                   borderRadius={"5px"}
                   p="10px"
-                  w="35%"
+                  w="220px"
                   border={"1px solid gray"}
                   mt="30px"
                 >
@@ -200,7 +200,7 @@ export default function Contact() {
                       <Link cursor={"pointer"}>
                         <Flex mt={{ base: "20px", sm: "0px" }}>
                           <svg
-                            fill="white"
+                            fill={colorMode === "light" ? "black" : "white"}
                             width="24"
                             height="24"
                             xmlns="http://www.w3.org/2000/svg"
@@ -221,7 +221,7 @@ export default function Contact() {
                 <Button
                   borderRadius={"5px"}
                   p="10px"
-                  w="35%"
+                  w="220px"
                   border={"1px solid gray"}
                   mt="30px"
                 >
@@ -279,11 +279,12 @@ export default function Contact() {
               </Flex>
             </Fade>
           </Flex>
-          <Box borderRadius={"5px"}>
+          <Box m="auto" borderRadius={"5px"}>
             <Fade right>
               <Box
                 bg={colorMode === "light" ? "white" : "none"}
                 borderRadius="9px"
+                m="auto"
               >
                 <ContactForm />
               </Box>
