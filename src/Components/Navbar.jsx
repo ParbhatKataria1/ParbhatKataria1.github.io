@@ -70,6 +70,7 @@ export default function Navbar() {
 
   return (
     <>
+    {/* there is a navbar */}
       <Box
         id="nav-menu"
         as="header"
