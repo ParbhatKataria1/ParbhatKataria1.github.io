@@ -17,6 +17,7 @@ import {
   useColorMode,
   Center,
   Text,
+  Image,
 } from "@chakra-ui/react";
 
 import { MoonIcon, SunIcon, HamburgerIcon } from "@chakra-ui/icons";
@@ -85,11 +86,17 @@ export default function Navbar() {
           alignItems={"center"}
           justifyContent={"space-between"}
           m="auto"
-          width={"94%"}
+          width={"97%"}
         >
-          <Box className="fontClass" w={{ base: "50%" }} fontSize={"42px"}>
-            Parbhat
-          </Box>
+          <Flex
+            alignItems={"center"}
+            className="fontClass"
+            w={{ base: "50%" }}
+            fontSize={"42px"}
+          >
+            <Image w="70px" src="logo.png" />
+            <Text ml="10px">Parbhat</Text>
+          </Flex>
 
           <Flex
             w={{ base: "20px", lg: "90%", xl: "70%" }}

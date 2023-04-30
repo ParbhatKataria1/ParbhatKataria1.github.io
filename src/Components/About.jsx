@@ -99,7 +99,6 @@ const About = () => {
                   textAlign={"center"}
                   class="home-img"
                   src={"PP.png"}
-                  
                   border="1px solid white"
                   alt="some good alt text"
                   // objectFit="cover"
@@ -183,11 +182,11 @@ const About = () => {
                 fontSize="lg"
                 id="user-detail-intro"
               >
-                I am a Full Stack Developer in MERN stack having good knowledge
-                o Express, MongoDB, JavaScript, HTML, CSS, etc. I am passionate
-                about learning new technologies and aiming to create world-class
-                web applications while facilitating organizations in achieving
-                ambitious goals.
+                I am a Full Stack Developer in MERN stack with good knowledge of
+                Express, MongoDB, JavaScript, HTML, CSS, and other related
+                technologies. I am passionate about learning new technologies
+                and aim to create world-class web applications that help
+                organizations achieve their ambitious goals.
               </Text>
               {/* <BlogAuthor name="John Doe" date={new Date('2021-04-06T19:01:27Z')} /> */}
             </Flex>

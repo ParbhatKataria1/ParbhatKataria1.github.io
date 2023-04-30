@@ -292,6 +292,15 @@ export default function Contact() {
           </Box>
         </Flex>
       </Container>
+      <Flex
+        p="10px"
+        fontSize={"20px"}
+        bg="#1a202c"
+        w="100%"
+        justifyContent={"center"}
+      >
+        Thanks for Visiting 😊
+      </Flex>
     </Box>
   );
 }
