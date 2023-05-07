@@ -98,7 +98,7 @@ const About = () => {
                 <Image
                   textAlign={"center"}
                   class="home-img"
-                  src={"P.png"}
+                  src={"parbhat-bg.png"}
                   border="1px solid white"
                   alt="some good alt text"
                   // objectFit="cover"
