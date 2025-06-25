@@ -131,8 +131,8 @@ const About = () => {
                       : "rgba(230, 250, 255, 0.56) 0px 22px 70px 4px;"
                   }
                 >
-                  <Text>1200+ Hours</Text>
-                  <Text>Full Stack Coding</Text>
+                  <Text>2+ Years</Text>
+                  <Text>MERN Experience</Text>
                 </Box>
 
                 <Box
@@ -182,11 +182,7 @@ const About = () => {
                 fontSize="lg"
                 id="user-detail-intro"
               >
-                I am a Full Stack Developer in MERN stack with good knowledge of
-                Express, MongoDB, JavaScript, HTML, CSS, and other related
-                technologies. I am passionate about learning new technologies
-                and aim to create world-class web applications that help
-                organizations achieve their ambitious goals.
+                I am a MERN Stack Developer with 2 years of experience in building scalable and responsive web applications. Proficient in MongoDB, Express.js, React.js, Node.js, and related technologies like JavaScript, HTML, and CSS. I have hands-on experience with API development, cloud deployment (AWS EC2), and CI/CD pipelines (GitLab). Passionate about writing clean code, optimizing performance, and continuously learning to deliver impactful digital solutions that drive organizational growth.
               </Text>
               {/* <BlogAuthor name="John Doe" date={new Date('2021-04-06T19:01:27Z')} /> */}
             </Flex>

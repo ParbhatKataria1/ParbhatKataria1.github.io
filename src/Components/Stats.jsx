@@ -32,7 +32,7 @@ const Stats = () => {
             direction={{ base: "column", md: "row" }}
             // border={"3px solid white"}
           >
-            <Link
+            {/* <Link
               // border={"3px solid white"}
               w={{ base: "100%", md: "33%" }}
               mt={{ base: "10px", md: "0px" }}
@@ -49,7 +49,7 @@ const Stats = () => {
                   ></Image>
                 </Fade>
               </Flex>
-            </Link>
+            </Link> */}
 
             <Link
               // border={"3px solid white"}

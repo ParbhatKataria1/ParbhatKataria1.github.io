@@ -41,7 +41,7 @@ let data = [
   },
   {
     image:
-      "https://serving.photos.photobox.com/78056824e1d2dcb063cf8a5ea1341a6907cb7b0db09d946e3a34b0372449333665356f22.jpg",
+      "sugar_cosmetic.png",
     title: "Sugar Cosmetics Clone",
     desc: "It is a beauty product-based website which is used to order cosmetic products",
     techStack: ["HTML", "CSS", "JavaScript", "JQuery"],
@@ -50,7 +50,7 @@ let data = [
   },
   {
     image:
-      "https://serving.photos.photobox.com/4315878941189d29f37cdb91e3aae0780f8c84e24e9a2df8c15c13d1be664bbffb5fec01.jpg",
+      "first.png",
     desc: "It is a hotel booking website for vacations",
     title: "Tripvillas Clone",
     techStack: ["HTML", "CSS", "JavaScript", "JQuery"],
