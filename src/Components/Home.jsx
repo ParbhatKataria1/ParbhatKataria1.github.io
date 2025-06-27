@@ -93,7 +93,7 @@ export default function Home() {
                 </Box>
                 <Text fontSize={"29px"}>Full Stack Web Developer</Text>
                 <Text pt="20px" fontSize={"21px"} lineHeight={"30px"}>
-                Analytical and detail-oriented Full Stack Developer with 2 years of hands-on experience in the MERN stack. Skilled in building scalable web applications that help organizations achieve their ambitious goals with efficiency and impact.
+                Analytical and detail-oriented Full Stack Developer with 2.5+ years of hands-on experience in the MERN stack. Skilled in building scalable web applications that help organizations achieve their ambitious goals with efficiency and impact.
 
 
                 </Text>

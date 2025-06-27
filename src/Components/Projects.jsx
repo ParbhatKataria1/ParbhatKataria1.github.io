@@ -26,7 +26,7 @@ let data = [
         image: "cars.png",
         desc: "GearHead is a website for selling second-hand cars.",
         title: "Gear Head",
-        techStack: ["React", "Chakra UI", "Express", "MongoDB"],
+        techStack: ["React","TypeScript", "Chakra UI", "Express", "MongoDB"],
         github: "https://github.com/ParbhatKataria1/attryb-cars",
         deploy: "https://attryb-cars.netlify.app/",
     },

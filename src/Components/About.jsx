@@ -182,7 +182,7 @@ const About = () => {
                 fontSize="lg"
                 id="user-detail-intro"
               >
-                I am a MERN Stack Developer with 2 years of experience in building scalable and responsive web applications. Proficient in MongoDB, Express.js, React.js, Node.js, and related technologies like JavaScript, HTML, and CSS. I have hands-on experience with API development, cloud deployment (AWS EC2), and CI/CD pipelines (GitLab). Passionate about writing clean code, optimizing performance, and continuously learning to deliver impactful digital solutions that drive organizational growth.
+                I am a MERN Stack Developer with 2.5+ years of experience in building scalable and responsive web applications. Proficient in MongoDB, Express.js, React.js, Node.js, and related technologies like JavaScript, HTML, and CSS. I have hands-on experience with API development, cloud deployment (AWS EC2), and CI/CD pipelines (GitLab). Passionate about writing clean code, optimizing performance, and continuously learning to deliver impactful digital solutions that drive organizational growth.
               </Text>
               {/* <BlogAuthor name="John Doe" date={new Date('2021-04-06T19:01:27Z')} /> */}
             </Flex>
