@@ -36,7 +36,7 @@ let data = [
         title: "Style Fashion",
         techStack: ["React", "Chakra UI", "0Auth", "Express", "MongoDB"],
         github: "https://github.com/ParbhatKataria1/assorted-desk-4504",
-        deploy: "https://ephemeral-platypus-7df5f7.netlify.app",
+        deploy: "https://stylevibe.netlify.app/",
     },
 
     {
