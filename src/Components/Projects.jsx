@@ -39,14 +39,14 @@ let data = [
         deploy: "https://stylevibe.netlify.app/",
     },
 
-    {
-        image: "sugar_cosmetic.png",
-        title: "Sugar Cosmetics Clone",
-        desc: "It is a beauty product-based website which is used to order cosmetic products",
-        techStack: ["HTML", "CSS", "JavaScript", "JQuery"],
-        github: "https://github.com/ParbhatKataria1/money-zephyr-6413",
-        deploy: "https://gleeful-lebkuchen-052b83.netlify.app",
-    },
+    // {
+    //     image: "sugar_cosmetic.png",
+    //     title: "Sugar Cosmetics Clone",
+    //     desc: "It is a beauty product-based website which is used to order cosmetic products",
+    //     techStack: ["HTML", "CSS", "JavaScript", "JQuery"],
+    //     github: "https://github.com/ParbhatKataria1/money-zephyr-6413",
+    //     deploy: "https://gleeful-lebkuchen-052b83.netlify.app",
+    // },
     {
         image: "first.png",
         desc: "It is a hotel booking website for vacations",
