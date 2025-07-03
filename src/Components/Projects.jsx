@@ -48,14 +48,6 @@ let data = [
     //     deploy: "https://gleeful-lebkuchen-052b83.netlify.app",
     // },
     {
-        image: "first.png",
-        desc: "It is a hotel booking website for vacations",
-        title: "Tripvillas Clone",
-        techStack: ["HTML", "CSS", "JavaScript", "JQuery"],
-        github: "https://github.com/ParbhatKataria1/longing-fairies-6305",
-        deploy: "https://shiny-klepon-a49c07.netlify.app",
-    },
-    {
         image: "unit5project.png",
         desc: "Sunglow Fashion is an e-commerce platform to buy clothes and fashion products.",
         title: "Sunglow Fashion",
@@ -63,6 +55,14 @@ let data = [
         github: "https://github.com/ParbhatKataria1/responsible-act-7116",
         deploy: "https://unit-5-frontend-deployement.netlify.app",
     },
+    {
+        image: "first.png",
+        desc: "It is a hotel booking website for vacations",
+        title: "Tripvillas Clone",
+        techStack: ["HTML", "CSS", "JavaScript", "JQuery"],
+        github: "https://github.com/ParbhatKataria1/longing-fairies-6305",
+        deploy: "https://shiny-klepon-a49c07.netlify.app",
+    }
 ];
 
 export default Projects;
