@@ -114,10 +114,9 @@ export default function Home() {
                     <Button
                       id="resume-button-2"
                       as="a"
-                      href="https://drive.google.com/file/d/1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer/view"
                       onClick={() =>
                         openInNewTab(
-                          'https://drive.google.com/file/d/1IBK2C2nWYp304rSxzBDP6Z4dW8Phsase/view?usp=sharing'
+                          'https://drive.google.com/file/d/1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer/view'
                         )
                       }
 
