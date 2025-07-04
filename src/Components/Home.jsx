@@ -27,7 +27,6 @@ import {
 import { ReactElement, useEffect } from "react";
 import { BiDownload } from "react-icons/bi";
 import Fade from "react-reveal/Fade";
-import openInNewTab from "../Helper/openInNewTab";
 
 const Feature = ({ text, icon, iconBg }) => {
   return (
@@ -113,20 +112,14 @@ export default function Home() {
                   >
                     <Button
                       id="resume-button-2"
-                      as="a"
-                      onClick={() =>
-                        openInNewTab(
-                          'https://drive.google.com/file/d/1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer/view'
-                        )
-                      }
-
+                      onClick={handleResume}
                       colorScheme="teal"
                       size="md"
                     >
                       <a
                         id="resume-link-2"
                         href="https://drive.google.com/file/d/1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer/view"
-                        download 
+                        target="_blank"
                       >
                         <Flex alignItems={"center"} mr={"4px"} ml="10px">
                           <Text mr="8px">Resume</Text> <BiDownload />
