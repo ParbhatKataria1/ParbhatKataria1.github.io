@@ -54,12 +54,14 @@ const About = () => {
                         justifyContent={{ base: "center", lg: "space-between" }}
                     >
                         <Box marginRight="3">
-                            <Flex width={{ base: "60%", md: "40%", lg: "85%" }} justifyContent={"center"} textAlign={"center"} borderRadius={"50%"} m="auto" zIndex="2">
+                            <Flex width={{ base: "60%", md: "40%", lg: "85%" }} height={'100%'} justifyContent={"center"} textAlign={"center"} borderRadius={"50%"} m="auto" zIndex="2">
                                 <Image
                                     textAlign={"center"}
                                     class="home-img"
-                                    src={"parbhat-bg-1.png"}
+                                    src={"parbhat-bg-1.jpg"}
                                     border="1px solid white"
+                                    borderRadius={"20px"}
+                                    objectFit={"cover"}
                                     alt="some good alt text"
                                     // objectFit="cover"
                                 />
