@@ -7,7 +7,6 @@ import Experience from "./Components/Experience";
 import Stats from "./Components/Stats";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
-import MouseTracker from "./Components/MouseTracker";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -21,7 +20,6 @@ function App() {
   return (
     <div style={{ marginTop: "0px" }}>
       <Box>
-        <MouseTracker />
         <Navbar />
         <Home />
         <About />
