@@ -1,5 +1,4 @@
 import { Box, Flex, Heading, Image, Link, Stack } from "@chakra-ui/react";
-import React, { useEffect } from "react";
 import GitHubCalendar from "react-github-calendar";
 import Fade from "react-reveal/Fade";
 
@@ -17,7 +16,7 @@ const Stats = () => {
           mt="50px"
           mb={"40px"}
         >
-          <Link href="https://github.com/ParbhatKataria1" target="_blank">
+          <Link href="https://github.com/ParbhatKataria1" target="_blank" rel="noreferrer">
             <Fade bottom>
               {" "}
               <GitHubCalendar username="ParbhatKataria1" />
@@ -38,6 +37,7 @@ const Stats = () => {
               mt={{ base: "10px", md: "0px" }}
               href="https://github.com/ParbhatKataria1"
               target="_blank"
+              rel="noreferrer"
             >
               <Flex justifyContent={"center"}>
                 <Fade bottom>
@@ -57,6 +57,7 @@ const Stats = () => {
               mt={{ base: "10px", md: "0px" }}
               href="https://github.com/ParbhatKataria1"
               target="_blank"
+              rel="noreferrer"
             >
               <Flex justifyContent={"center"}>
                 <Fade bottom>

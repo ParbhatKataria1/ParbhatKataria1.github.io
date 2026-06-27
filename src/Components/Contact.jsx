@@ -1,4 +1,3 @@
-import { ReactNode, useEffect } from "react";
 import {
   Box,
   Flex,
@@ -6,7 +5,6 @@ import {
   Text,
   Stack,
   Container,
-  Avatar,
   useColorModeValue,
   Image,
   useColorMode,
@@ -15,88 +13,18 @@ import {
 } from "@chakra-ui/react";
 import ContactForm from "../Helper/ContactForm";
 import Fade from "react-reveal/Fade";
-import AnimatedEyes from "../Helper/AnimateEyes";
-
-const Testimonial = ({ children }) => {
-  return <Box>{children}</Box>;
-};
-
-const TestimonialContent = ({ children }) => {
-  return (
-    <Stack
-      id="contact"
-      bg={useColorModeValue("white", "gray.800")}
-      boxShadow={"lg"}
-      p={8}
-      rounded={"xl"}
-      align={"center"}
-      pos={"relative"}
-      _after={{
-        content: `""`,
-        w: 0,
-        h: 0,
-        borderLeft: "solid transparent",
-        borderLeftWidth: 16,
-        borderRight: "solid transparent",
-        borderRightWidth: 16,
-        borderTop: "solid",
-        borderTopWidth: 16,
-        borderTopColor: useColorModeValue("white", "gray.800"),
-        pos: "absolute",
-        bottom: "-16px",
-        left: "50%",
-        transform: "translateX(-50%)",
-      }}
-    >
-      {children}
-    </Stack>
-  );
-};
-
-const TestimonialHeading = ({ children }) => {
-  return (
-    <Heading as={"h3"} fontSize={"xl"}>
-      {children}
-    </Heading>
-  );
-};
-
-const TestimonialText = ({ children }) => {
-  return (
-    <Text
-      textAlign={"center"}
-      color={useColorModeValue("gray.600", "gray.400")}
-      fontSize={"sm"}
-    >
-      {children}
-    </Text>
-  );
-};
-
-const TestimonialAvatar = ({ src, name, title }) => {
-  return (
-    <Flex align={"center"} mt={8} direction={"column"}>
-      <Avatar src={src} alt={name} mb={2} />
-      <Stack spacing={-1} align={"center"}>
-        <Text fontWeight={600}>{name}</Text>
-        <Text fontSize={"sm"} color={useColorModeValue("gray.600", "gray.400")}>
-          {title}
-        </Text>
-      </Stack>
-    </Flex>
-  );
-};
 
 export default function Contact() {
-  const { colorMode, toggleColorMode } = useColorMode(false);
+  const { colorMode } = useColorMode(false);
   return (
     <Box
       id="contact"
       bg={useColorModeValue("gray.100", "gray.700")}
-      pt="30px"
-      mt="100px"
+      pt={{ base: "110px", md: "130px" }}
+      mt="0"
+      scrollMarginTop={{ base: "76px", md: "86px" }}
     >
-      <Container maxW={"7xl"} py={16} as={Stack} spacing={12}>
+      <Container maxW={"7xl"} pb={16} as={Stack} spacing={12}>
         <Stack spacing={0} align={"center"}>
           <Fade bottom>
             <Heading>Contact Me</Heading>
@@ -126,6 +54,7 @@ export default function Contact() {
                   <Link
                     href="https://github.com/ParbhatKataria1"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <Flex m="10px" alignItems={"center"}>
                       <Link
@@ -133,6 +62,7 @@ export default function Contact() {
                         id="contact-github"
                         href="https://github.com/ParbhatKataria1"
                         target="_blank"
+                        rel="noreferrer"
                       >
                         <svg
                           fill={colorMode === "light" ? "black" : "white"}
@@ -165,6 +95,7 @@ export default function Contact() {
                         id="contact-linkedin"
                         href="https://www.linkedin.com/in/parbhat004/"
                         target="_blank"
+                        rel="noreferrer"
                       >
                         <svg
                           fill={colorMode === "light" ? "black" : "white"}
@@ -204,8 +135,8 @@ export default function Contact() {
                             width="24"
                             height="24"
                             xmlns="http://www.w3.org/2000/svg"
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
+                            fillRule="evenodd"
+                            clipRule="evenodd"
                           >
                             <path d="M24 21h-24v-18h24v18zm-23-16.477v15.477h22v-15.477l-10.999 10-11.001-10zm21.089-.523h-20.176l10.088 9.171 10.088-9.171z" />
                           </svg>
@@ -264,16 +195,16 @@ export default function Contact() {
                   width="100px"
                   h="30px"
                   fill={colorMode === "light" ? "black" : "white"}
-                  clip-rule="evenodd"
-                  fill-rule="evenodd"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="2"
+                  clipRule="evenodd"
+                  fillRule="evenodd"
+                  strokeLinejoin="round"
+                  strokeMiterlimit="2"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z"
-                    fill-rule="nonzero"
+                    fillRule="nonzero"
                   />
                 </svg>
               </Flex>

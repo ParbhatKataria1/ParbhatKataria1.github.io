@@ -1,4 +1,3 @@
-import { StarIcon } from "@chakra-ui/icons";
 import {
   Badge,
   Box,
@@ -7,12 +6,10 @@ import {
   Image,
   Link,
   Text,
-  Heading,
   Code,
 } from "@chakra-ui/react";
 import { BiLinkExternal } from "react-icons/bi";
 import { BsGithub } from "react-icons/bs";
-import { useEffect } from "react";
 import Fade from "react-reveal/Fade";
 
 function HelperProject({ image, title, techStack, desc, github, deploy }) {
@@ -57,8 +54,8 @@ function HelperProject({ image, title, techStack, desc, github, deploy }) {
                   colorScheme={"teal"}
                 >
                   <Badge
-                    class="project-tech-stack"
-                    key={ind + Date.now()}
+                    className="project-tech-stack"
+                    key={`${el}-${ind}`}
                     borderRadius="full"
                     colorScheme="teal"
                   >
@@ -93,7 +90,7 @@ function HelperProject({ image, title, techStack, desc, github, deploy }) {
           </Text>
 
           <Flex mt={"4"} justifyContent={"space-between"}>
-            <Link class="project-github-link" href={github} isExternal>
+            <Link className="project-github-link" href={github} isExternal>
               <Button size="sm" colorScheme="teal" variant="solid">
                 <Text mr={"4px"}>GitHub</Text>
 
@@ -101,7 +98,7 @@ function HelperProject({ image, title, techStack, desc, github, deploy }) {
               </Button>
             </Link>
 
-            <Link class="project-deployed-link" href={deploy} isExternal>
+            <Link className="project-deployed-link" href={deploy} isExternal>
               <Button size="sm" colorScheme="teal" variant="outline">
                 <Text mr={"4px"}>Deployed Link</Text>
                 <BiLinkExternal />

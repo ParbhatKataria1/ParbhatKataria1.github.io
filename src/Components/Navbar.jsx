@@ -1,51 +1,19 @@
-import { React, ReactNode, useEffect, useRef } from "react";
+import { useEffect } from "react";
 import {
   Box,
   Flex,
-  Avatar,
-  Link,
   Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  Input,
-  MenuDivider,
-  useDisclosure,
-  useColorModeValue,
-  Stack,
   useColorMode,
-  Center,
   Text,
   Image,
 } from "@chakra-ui/react";
 
-import { MoonIcon, SunIcon, HamburgerIcon } from "@chakra-ui/icons";
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { BiDownload } from "react-icons/bi";
 import DrawerExample from "./SideBar";
-// import { handleResume } from "./Home";
+import handleResume from "../Helper/handleResume";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import Zoom from "react-reveal/Zoom";
-
-function handleResume() {
-  window.location.href = `https://drive.google.com/uc?export=download&id=1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer`;
-}
-
-const NavLink = ({ children }) => (
-  <Link
-    px={2}
-    py={1}
-    rounded={"md"}
-    _hover={{
-      textDecoration: "none",
-      bg: useColorModeValue("gray.200", "gray.700"),
-    }}
-    href={"#"}
-  >
-    {children}
-  </Link>
-);
 
 export default function Navbar() {
   useEffect(() => {
@@ -53,10 +21,6 @@ export default function Navbar() {
   }, []);
 
   const { colorMode, toggleColorMode } = useColorMode();
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  useEffect(() => {
-    toggleColorMode("dark");
-  }, []);
 
   const handleClickScroll = (value) => {
     const element = document.getElementById(value);
@@ -65,8 +29,6 @@ export default function Navbar() {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
-
-  console.log(colorMode);
 
   return (
     <>
@@ -119,7 +81,7 @@ export default function Navbar() {
                 colorScheme="gray"
                 variant="ghost"
               >
-                <a className="nav-link home">
+                <span className="nav-link home">
                   <Flex alignItems={"center"}>
                     <svg
                       fill={colorMode === "light" ? "black" : "white"}
@@ -127,14 +89,14 @@ export default function Navbar() {
                       height="24"
                       transform="scale(0.7)"
                       xmlns="http://www.w3.org/2000/svg"
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
                     >
                       <path d="M6 23h-3v-10l8.991-8.005 9.009 8.005v10h-3v-9h-12v9zm1-2h10v2h-10v-2zm0-3h10v2h-10v-2zm10-3v2h-10v-2h10zm-5-14.029l12 10.661-1.328 1.493-10.672-9.481-10.672 9.481-1.328-1.493 12-10.661z" />
                     </svg>
                     <Text ml="10px">Home</Text>
                   </Flex>
-                </a>
+                </span>
               </Button>
 
               <Button
@@ -144,7 +106,7 @@ export default function Navbar() {
                 }}
                 variant="ghost"
               >
-                <a className="nav-link about">
+                <span className="nav-link about">
                   <Flex alignItems={"center"}>
                     <svg
                       fill={colorMode === "light" ? "black" : "white"}
@@ -158,7 +120,7 @@ export default function Navbar() {
                     </svg>
                     <Text ml="10px">About</Text>
                   </Flex>
-                </a>
+                </span>
               </Button>
 
               <Button
@@ -168,7 +130,7 @@ export default function Navbar() {
                 colorScheme="gray"
                 variant="ghost"
               >
-                <a className="nav-link skills">
+                <span className="nav-link skills">
                   <Flex alignItems={"center"}>
                     <svg
                       fill={colorMode === "light" ? "black" : "white"}
@@ -182,7 +144,31 @@ export default function Navbar() {
                     </svg>
                     <Text ml="10px">Skills</Text>
                   </Flex>
-                </a>
+                </span>
+              </Button>
+
+              <Button
+                onClick={() => {
+                  handleClickScroll("experience");
+                }}
+                colorScheme="gray"
+                variant="ghost"
+              >
+                <span className="nav-link experience">
+                  <Flex alignItems={"center"}>
+                    <svg
+                      fill={colorMode === "light" ? "black" : "white"}
+                      transform="scale(0.7)"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M20 6h-4v-2c0-1.104-.896-2-2-2h-4c-1.104 0-2 .896-2 2v2h-4c-1.104 0-2 .896-2 2v12c0 1.104.896 2 2 2h16c1.104 0 2-.896 2-2v-12c0-1.104-.896-2-2-2zm-10-2h4v2h-4v-2zm10 16h-16v-7h6v2h4v-2h6v7zm0-9h-16v-3h16v3z" />
+                    </svg>
+                    <Text ml="10px">Experience</Text>
+                  </Flex>
+                </span>
               </Button>
 
               <Button
@@ -192,7 +178,7 @@ export default function Navbar() {
                 colorScheme="gray"
                 variant="ghost"
               >
-                <a className="nav-link projects">
+                <span className="nav-link projects">
                   <Flex alignItems={"center"}>
                     <svg
                       fill={colorMode === "light" ? "black" : "white"}
@@ -206,7 +192,7 @@ export default function Navbar() {
                     </svg>
                     <Text ml="10px">Projects</Text>
                   </Flex>
-                </a>
+                </span>
               </Button>
 
               <Button
@@ -216,7 +202,7 @@ export default function Navbar() {
                 colorScheme="gray"
                 variant="ghost"
               >
-                <a className="nav-link contact">
+                <span className="nav-link contact">
                   <Flex alignItems={"center"}>
                     <svg
                       fill={colorMode === "light" ? "black" : "white"}
@@ -230,20 +216,22 @@ export default function Navbar() {
                     </svg>
                     <Text ml="10px">Contact</Text>
                   </Flex>
-                </a>
+                </span>
               </Button>
 
               <Button
                 className="nav-link resume"
-                onClick={handleResume}
                 id="resume-button-1"
                 colorScheme="teal"
                 size="md"
               >
                 <a
                   id="resume-link-1"
-                  href="https://drive.google.com/file/d/1h1lan92QxkqGlsHdt9_KQ5UWXqLiyaer/view"
+                  href="Parbhat_Resume.pdf"
+                  download
                   target="_blank"
+                  rel="noreferrer"
+                  onClick={handleResume}
                 >
                   <Flex alignItems={"center"} mr={"4px"} ml="10px">
                     <Text mr="8px">Resume</Text> <BiDownload />

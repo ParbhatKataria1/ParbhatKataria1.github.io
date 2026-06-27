@@ -1,17 +1,15 @@
-import { React, ReactNode, useEffect, useRef } from "react";
+import { useRef } from "react";
 import { MoonIcon, SunIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { BiDownload } from "react-icons/bi";
 
 import {
   Drawer,
   DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
   Button,
-  Input,
   Flex,
   Link,
   Text,
@@ -23,6 +21,10 @@ export default function DrawerExample({ handleClickScroll, handleResume }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
   const btnRef = useRef();
+  const scrollAndClose = (sectionId) => {
+    handleClickScroll(sectionId);
+    onClose();
+  };
 
   return (
     <>
@@ -48,21 +50,23 @@ export default function DrawerExample({ handleClickScroll, handleResume }) {
                 id="resume-link-1"
                 href="Parbhat_Resume.pdf"
                 download
-                onClick={handleResume}
+                onClick={(event) => {
+                  handleResume(event);
+                  onClose();
+                }}
                 target="_blank"
+                rel="noreferrer"
               >
                 <Button
                   id="resume-button-1"
-                  class="nav-link resume"
-                  colorScheme="blue"
+                  className="nav-link resume"
+                  colorScheme="teal"
                   size="md"
                   ml="20px"
                   variant="solid"
                 >
-                  <Flex ml="10px" alignItems={"center"}>
-                    <Button>
-                      <Text mr={"4px"}>Resume</Text> <BiDownload />
-                    </Button>
+                  <Flex alignItems={"center"}>
+                    <Text mr={"6px"}>Resume</Text> <BiDownload />
                   </Flex>
                 </Button>
               </Link>
@@ -80,9 +84,9 @@ export default function DrawerExample({ handleClickScroll, handleResume }) {
               <Flex
                 w="100%"
                 onClick={() => {
-                  handleClickScroll("home");
+                  scrollAndClose("home");
                 }}
-                class="nav-link home"
+                className="nav-link home"
                 colorScheme="gray"
                 variant="ghost"
                 align="center"
@@ -101,10 +105,10 @@ export default function DrawerExample({ handleClickScroll, handleResume }) {
 
               <Flex
                 w="100%"
-                class="nav-link about"
+                className="nav-link about"
                 colorScheme="gray"
                 onClick={() => {
-                  handleClickScroll("about");
+                  scrollAndClose("about");
                 }}
                 variant="ghost"
                 align="center"
@@ -123,9 +127,9 @@ export default function DrawerExample({ handleClickScroll, handleResume }) {
 
               <Flex
                 w="100%"
-                class="nav-link skills"
+                className="nav-link skills"
                 onClick={() => {
-                  handleClickScroll("skills");
+                  scrollAndClose("skills");
                 }}
                 colorScheme="gray"
                 variant="ghost"
@@ -145,10 +149,32 @@ export default function DrawerExample({ handleClickScroll, handleResume }) {
 
               <Flex
                 w="100%"
-                textAlign={"left"}
-                class="nav-link projects"
+                className="nav-link experience"
                 onClick={() => {
-                  handleClickScroll("projects");
+                  scrollAndClose("experience");
+                }}
+                colorScheme="gray"
+                variant="ghost"
+                align="center"
+                p="3"
+                mx="4"
+                borderRadius="lg"
+                role="group"
+                cursor="pointer"
+                _hover={{
+                  bg: "cyan.400",
+                  color: "white",
+                }}
+              >
+                Experience
+              </Flex>
+
+              <Flex
+                w="100%"
+                textAlign={"left"}
+                className="nav-link projects"
+                onClick={() => {
+                  scrollAndClose("projects");
                 }}
                 colorScheme="gray"
                 variant="ghost"
@@ -169,9 +195,9 @@ export default function DrawerExample({ handleClickScroll, handleResume }) {
               <Flex
                 w="100%"
                 onClick={() => {
-                  handleClickScroll("contact");
+                  scrollAndClose("contact");
                 }}
-                class="nav-link contact"
+                className="nav-link contact"
                 colorScheme="gray"
                 variant="ghost"
                 align="center"

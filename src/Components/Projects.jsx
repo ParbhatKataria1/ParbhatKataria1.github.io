@@ -1,5 +1,4 @@
 import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
-import React, { useEffect } from "react";
 import HelperProject from "../Helper/HelperProject";
 import Fade from "react-reveal/Fade";
 
@@ -7,14 +6,19 @@ const Projects = () => {
     return (
         // Passing `columns={[2, null, 3]}` and `columns={{sm: 2, md: 3}}`
         // will have the same effect.
-        <Box id="projects" textAlign={"center"} pt="130px" mt={"10"}>
+        <Box
+            id="projects"
+            textAlign={"center"}
+            pt={{ base: "110px", md: "130px" }}
+            scrollMarginTop={{ base: "76px", md: "86px" }}
+        >
             <Heading>
                 {" "}
                 <Fade bottom> Projects </Fade>
             </Heading>
             <SimpleGrid justifyContent="center" textAlign={"center"} m={"auto"} columns={{ base: "1", md: "2", xl: "3" }} spacing={{ base: "10px", md: "40px" }} w={{ base: "95%", md: "81%" }} marginTop="70px" marginBottom={"50px"}>
                 {data.map((el, ind) => {
-                    return <HelperProject key={Date.now() + ind} {...el} />;
+                    return <HelperProject key={el.title} {...el} />;
                 })}
             </SimpleGrid>
         </Box>

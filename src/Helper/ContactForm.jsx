@@ -1,32 +1,17 @@
-import React, { useState } from "react";
 import {
-  Progress,
   Box,
-  ButtonGroup,
   Button,
   Heading,
   Flex,
   FormControl,
-  GridItem,
   FormLabel,
   Input,
-  Select,
-  SimpleGrid,
-  InputLeftAddon,
   InputGroup,
   Textarea,
   FormHelperText,
-  InputRightElement,
 } from "@chakra-ui/react";
 
-import { useToast } from "@chakra-ui/react";
-
 const Form1 = () => {
-  const [show, setShow] = React.useState(false);
-  const handleClick = () => setShow(!show);
-  function click() {
-    console.log("this");
-  }
   return (
     <Box>
       <form
@@ -94,9 +79,6 @@ const Form1 = () => {
 };
 
 export default function ContactForm() {
-  const toast = useToast();
-  const [step, setStep] = useState(1);
-  const [progress, setProgress] = useState(33.33);
   return (
     <>
       <Box
@@ -110,26 +92,6 @@ export default function ContactForm() {
         as="form"
       >
         <Form1 />
-        <ButtonGroup mt="5%" w="100%">
-          <Flex w="100%" justifyContent="space-between">
-            {/* <Button
-              w="7rem"
-              isDisabled={step === 3}
-              onClick={() => {
-                setStep(step + 1);
-                if (step === 3) {
-                  setProgress(100);
-                } else {
-                  setProgress(progress + 33.33);
-                }
-              }}
-              colorScheme="gray"
-              variant="outline"
-            >
-              Next
-            </Button> */}
-          </Flex>
-        </ButtonGroup>
       </Box>
     </>
   );
